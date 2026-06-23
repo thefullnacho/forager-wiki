@@ -1,0 +1,22 @@
+# Forager Wiki — index
+
+The cross-project knowledge layer for the **Forager / Homesteader Labs** constellation: four
+repos that overlap and inherit from one another. Read [[CLAUDE]] for how this wiki is maintained.
+The relationships between projects live in [[ligaments]].
+
+## Projects
+- [[hestia]] — the homestead brain: HA-integrated agent (LLM + tools + voice) on the GPU box. Member, not neighbour.
+- [[forager-ml]] — trains the plant/fungi ID model stack; compiles to Hailo 8L for the Pi 5 field device.
+- [[forager-field-station]] — the public HF Gradio Space; CPU twin of the same model stack (hackathon build).
+- [[homesteader-labs-site]] — the Next.js brand/content/product site; sells the hardware the model runs on.
+
+## Shared entities (live in >1 repo)
+- [[model-registry]] — canonical router+experts stack; the psychedelics & router-version divergences.
+- [[edge-hardware]] — Hailo 8L / Pi 5 `forager-dev` / the WALKING MAN PRO handheld.
+- [[dev-box-and-cuda]] — the shared RTX 5080 + 4060 Ti box and the recurring CUDA library-path gotcha.
+- [[brand-thesis]] — caloric security / off-grid / "refuses when unsure" + the brand voice.
+
+## Open threads (see `DIVERGENCE:` / `VERIFY:` items)
+- DIVERGENCE: field-station serves 3 experts (psychedelics omitted by intent); forager_ml trains 4 — see [[model-registry]].
+- VERIFY: field-station serves `domain_router_v2`; forager_ml's published manifest is `domain_router` (v1) — which is canonical? [[model-registry]]
+- TODO: the planned [[hestia]] ← pest-alert ligament has no source artifact yet — see [[ligaments]].
