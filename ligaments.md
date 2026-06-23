@@ -33,4 +33,5 @@ another. This page is the canonical list of those edges; each project page links
   GDD against the thresholds, and fires an HA alert at the emergence window ("hornworm window
   opening for tomatoes — interplant basil/borage now"). No new ML required; this is a deterministic
   threshold job (HA timers/thresholds, hestia's "determinism over intelligence" north star), not an
-  LLM job. This edge makes hestia a full member.
+  LLM job. This edge makes hestia a full member. **Spec written:** `hestia/brain/PEST_WATCH.md`
+  (GDD-spine design + the no-soil-temp-sensor constraint + task checklist).
