@@ -14,3 +14,12 @@ Append-only. One dated line per ingest / decision / lint pass. Newest at the bot
     model/dataset on the site; crop/companion-planting JSON is the candidate raw material).
   - Context: created right after hestia's voice phase wrapped (browser mic + the `libcublas`
     LD_LIBRARY_PATH fix), which surfaced the shared CUDA gotcha now in [[dev-box-and-cuda]].
+- **2026-06-23 — ingest: located the site's pest/frost logic; pinned the pest-alert source.**
+  Dug through the marketing site libs (it was "buried"). Found `content/crops/pest-companions.json`
+  is a *phenology-aware* pest-emergence table (soil-temp + GDD thresholds, evidence-rated
+  companions), not a static chart — and it's keyed to exactly what [[hestia]] already senses
+  (per-bed soil temp/GDD). Upgraded the [[ligaments]] pest-alert edge from "no source" to that
+  concrete data source, and inventoried the buried logic (pest, frost `lib/frostNormals.ts`,
+  caloric-security / survivalPlan subsystems) on [[homesteader-labs-site]]. Pointer commits to the
+  four repos landed (hestia & field-station on new `docs/forager-wiki-pointer` branches; forager_ml
+  & site on `dev`).

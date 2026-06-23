@@ -21,9 +21,16 @@ another. This page is the canonical list of those edges; each project page links
 
 ## Planned edges (roadmap — not built)
 
-- **[[homesteader-labs-site]] → [[hestia]]** *(pest-alert)*: pull a "pest model" and package it
-  as an alert system through Home Assistant, so the homestead brain warns about pest pressure.
-  TODO/VERIFY: **no `pest` model or dataset exists yet** (grep of the site is clean). Likely raw
-  material = the site's crop/companion-planting data in `content/crops` (companion planting
-  encodes pest deterrence) and/or a new expert trained in [[forager-ml]]. Pin the source before
-  building. This is the edge that makes hestia a full member of the constellation, not a neighbour.
+- **[[homesteader-labs-site]] → [[hestia]]** *(pest-alert)*: warn about pest pressure through
+  Home Assistant. **Source pinned (2026-06-23):** it's *data, not a model* —
+  `content/crops/pest-companions.json` on the site is a **phenology-aware pest-emergence table**:
+  per crop, a list of `pests` each with a `soilTempThreshold` (°F) and `gddThreshold`
+  (growing-degree-days) for emergence, plus `companions` (trap-crop / repellent interplantings)
+  tagged with an `evidenceLevel`. Consumed today by `app/tools/caloric-security/companions/page.tsx`.
+  **Why hestia is the natural consumer:** those thresholds are keyed to soil temperature + GDD,
+  which hestia already measures per bed (the Ecowitt soil sensors — see hestia's garden memory).
+  So the build is: hestia reads `pest-companions.json`, tracks each bed's soil-temp/accumulated
+  GDD against the thresholds, and fires an HA alert at the emergence window ("hornworm window
+  opening for tomatoes — interplant basil/borage now"). No new ML required; this is a deterministic
+  threshold job (HA timers/thresholds, hestia's "determinism over intelligence" north star), not an
+  LLM job. This edge makes hestia a full member.

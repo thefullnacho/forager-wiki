@@ -14,6 +14,18 @@ content. No backend DB: static JSON, MDX, and client-side localStorage. Has a st
 (`lib/products.ts` — WALKING MAN PRO, HELTEC V3), planting/survival calculators
 (`lib/plantingIndex.ts`, `lib/survivalIndex.ts`), blog/archive MDX.
 
+**Key buried logic (findable now — the point of this wiki):**
+- **Pest emergence + companions:** `content/crops/pest-companions.json` — *phenology-aware*, not a
+  static chart: each crop's `pests` carry `soilTempThreshold` + `gddThreshold` (emergence) and
+  evidence-rated `companions` (trap-crop/repellent interplantings). Plus `companion-planting.json`.
+  UI: `app/tools/caloric-security/companions/page.tsx`. This is the data the [[hestia]] pest-alert
+  ligament consumes — see [[ligaments]].
+- **Frost accuracy:** `lib/frostNormals.ts` → `getFrostDatesByZone(zone, zip)` over **NOAA
+  1991–2020 normals** in `content/frost-zones.json` (USDA-zone keyed), fallback to a live
+  `frost.date` API; `lib/zoneLookup.ts` resolves the zone; feeds `lib/plantingIndex.ts`.
+- **Subsystems:** `lib/caloric-security/*` (yield/decay/energy/water autonomy scoring) and
+  `lib/survivalPlan/*` (paid plan generator + Stripe). Defer to the code for mechanics.
+
 **Edges** ([[ligaments]]):
 - **Sells** the hardware [[forager-ml]] deploys to — the WALKING MAN PRO handheld; see [[edge-hardware]].
 - Source of the [[brand-thesis]] + voice inherited by every other project's outward writing.
