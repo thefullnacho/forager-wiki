@@ -32,3 +32,7 @@ Append-only. One dated line per ingest / decision / lint pass. Newest at the bot
   `alwaysUpdateLinks: false` + daily-notes/templates/note-composer disabled so Obsidian never
   auto-rewrites links or auto-creates notes. Graph view stands in as a live lint dashboard for
   [[ligaments]] edges and unresolved `[[links]]`.
+- **2026-06-23 — added the first playbook: [[brag-video]].** New `playbooks/` category for repeatable
+  cross-project workflows. Captures the `/brag` → Hyperframes pipeline and the gotchas from the
+  Hestia run (Outfit-only fonts, audio needs ids, GSAP hard-kills, timeline capping, beat-sync) so
+  the next crank (field-station / forager_ml / site) is faster. Both Hestia cuts logged as templates.

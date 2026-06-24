@@ -16,6 +16,9 @@ The relationships between projects live in [[ligaments]].
 - [[dev-box-and-cuda]] — the shared RTX 5080 + 4060 Ti box and the recurring CUDA library-path gotcha.
 - [[brand-thesis]] — caloric security / off-grid / "refuses when unsure" + the brand voice.
 
+## Playbooks (repeatable workflows for any project)
+- [[brag-video]] — point `/brag` at any repo → a 15–25s polished launch clip / vertical reel from its own UI.
+
 ## Open threads (see `DIVERGENCE:` / `VERIFY:` items)
 - DIVERGENCE: field-station serves 3 experts (psychedelics omitted by intent); forager_ml trains 4 — see [[model-registry]].
 - VERIFY: field-station serves `domain_router_v2`; forager_ml's published manifest is `domain_router` (v1) — which is canonical? [[model-registry]]
