@@ -43,3 +43,12 @@ Append-only. One dated line per ingest / decision / lint pass. Newest at the bot
   The playbook paid off: faster run (reused hyperframes via symlink), and the only surprise was the
   pre-warned font rule (`Caveat` not auto-resolved → mono). Output kept in a sibling dir, not the
   site's Next.js repo.
+- **2026-06-23 — market research landed in [[hestia]] (`~/hestia/MARKET.md`).** External/competitive
+  intel (kept in-repo, not copied up — the wiki holds the pointer, not the content). Frames Hestia as
+  a four-way convergence play (self-host local-LLM + persistent memory + home control + household
+  records) with no competitor holding the center: Khoj has memory but no house; Nabu Casa's HA Voice
+  PE has the house but a thin/loop-owning brain; big-tech Alexa+/Gemini own neither ownership nor
+  your memory. Rides the 2026 "local AI hub" tailwind (17k+ HA users on local STT/LLM, Qwen3
+  consensus = Hestia's lineage). **Constellation-relevant finding:** *Mind the Farm* (talk-to-your-
+  homestead-records SaaS) validates demand for the planned sensing→homestead ligament — Forager
+  pest/plant ID → HA alerts surfacing through Hestia's `records` tool. See [[ligaments]].
