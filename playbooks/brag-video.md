@@ -40,14 +40,30 @@ In Claude Code, inside the target project dir:
   the beat grid; lock 1–3 major moments to strong cues. Hold readable text to its reading floor.
 
 ## Existing cuts (clone these as templates)
-- **Landscape** — `~/hestia/brag-output/` (Ask → Answer → All-local → hearth wordmark).
-- **Vertical reel** — `~/hestia/brag-output-reel/` — adds a four-verb beat
-  (**Tend · Track · Remember · Enjoy**) resolving into *"the central nervous system for your home."*
+Two tonal templates — match the tone to the *brand*, not a house style.
+
+**A. [[hestia]] — "quiet premium" (polished).** Warm hearth-orange `#d98a4b` on near-black, `Outfit`
+font, soft crossfades, long holds, calm SFX. For an earnest product that speaks for itself.
+- Landscape — `~/hestia/brag-output/` (Ask → Answer → All-local → hearth wordmark).
+- Vertical reel — `~/hestia/brag-output-reel/` — adds a four-verb beat
+  (**Tend · Track · Remember · Enjoy**) → *"the central nervous system for your home."*
+
+**B. [[homesteader-labs-site]] — "field terminal" (cinematic).** Bold `#ff7300` on warm black
+`#1c1917`, **monospace** (Courier/terminal), HUD corner-brackets + scanlines, a typewriter hook
+(`clip-path: inset` + `steps()` ease), key-clack/click/impact SFX. For a gritty, declarative,
+militaristic-homestead brand. Built straight from the site's real tokens + copy
+(*"Tools for those who build their own world"* · Hardware/Knowledge/Community · WALKING MAN PRO ·
+ACCESS TERMINAL). Output: `~/Documents/Forager/homesteader-site-brag/` (a **sibling dir, NOT inside
+the Next.js repo**, so it can't touch the dev server / git). 2026-06-23.
+- *Run notes:* reused the installed hyperframes via a `node_modules` symlink (no 7-min reinstall);
+  `Caveat` (the site's `font-hand`) is **not** auto-resolved → swapped the handwritten line to a
+  mono terminal-comment (`// OFF-GRID · NO CLOUD`). Both confirm the font rule above.
 
 ## Cranking it for the other projects
 - [[forager-field-station]] — already has a demo video; a brag reel could repurpose the
   abstain / "refuses when unsure" angle.
 - [[forager-ml]] — show the router → expert pipeline + deadly-vetoes-safe; palette from its README.
-- [[homesteader-labs-site]] — showcase the planting / pest tools; inherit the voice from [[brand-thesis]].
+- [[homesteader-labs-site]] — **DONE 2026-06-23** (template B above): field-terminal cut showcasing
+  the planting / pest tools + WALKING MAN PRO.
 
 All outward content inherits the thesis + voice in [[brand-thesis]] (off-grid / "no cloud").

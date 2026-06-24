@@ -36,3 +36,10 @@ Append-only. One dated line per ingest / decision / lint pass. Newest at the bot
   cross-project workflows. Captures the `/brag` → Hyperframes pipeline and the gotchas from the
   Hestia run (Outfit-only fonts, audio needs ids, GSAP hard-kills, timeline capping, beat-sync) so
   the next crank (field-station / forager_ml / site) is faster. Both Hestia cuts logged as templates.
+- **2026-06-23 — second [[brag-video]] template: the [[homesteader-labs-site]] field-terminal cut.**
+  Ran the playbook on the marketing site → a cinematic terminal piece (bold `#ff7300` on black,
+  monospace, HUD brackets, typewriter hook) built from the site's real copy. Logged as **template B**
+  (vs Hestia's polished **template A**) so future cranks pick a tone by *brand*, not house style.
+  The playbook paid off: faster run (reused hyperframes via symlink), and the only surprise was the
+  pre-warned font rule (`Caveat` not auto-resolved → mono). Output kept in a sibling dir, not the
+  site's Next.js repo.
