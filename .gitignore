@@ -1,0 +1,10 @@
+# Obsidian per-machine GUI state — the vault is a read/navigate lens only.
+# Content + schema are git-tracked; Obsidian's local config is not, so the GUI
+# can't fork the LLM-maintained wiki. See CLAUDE.md.
+.obsidian/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*~

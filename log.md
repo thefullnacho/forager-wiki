@@ -23,3 +23,12 @@ Append-only. One dated line per ingest / decision / lint pass. Newest at the bot
   caloric-security / survivalPlan subsystems) on [[homesteader-labs-site]]. Pointer commits to the
   four repos landed (hestia & field-station on new `docs/forager-wiki-pointer` branches; forager_ml
   & site on `dev`).
+- **2026-06-23 — decision: wiki doubles as an Obsidian vault (read/navigate lens).** The repo
+  already speaks Obsidian natively (`[[wikilinks]]`, flat markdown, basename link resolution), so
+  no migration — just open the folder as a vault. Write path stays git + agent; Obsidian is for
+  reading/graph/backlinks only. Added `.gitignore` (`.obsidian/` + OS cruft) so per-machine GUI
+  state can't fork the LLM-maintained content. Local `.obsidian` config tuned to match the schema:
+  wikilinks kept (`useMarkdownLinks: false`), `newLinkFormat: shortest` (basename), and
+  `alwaysUpdateLinks: false` + daily-notes/templates/note-composer disabled so Obsidian never
+  auto-rewrites links or auto-creates notes. Graph view stands in as a live lint dashboard for
+  [[ligaments]] edges and unresolved `[[links]]`.
