@@ -1,6 +1,10 @@
 # hestia
 
-`~/hestia` · git `master`
+`~/hestia` · **public on GitHub** ([github.com/thefullnacho/hestia](https://github.com/thefullnacho/hestia)), **AGPL-3.0**
+
+> Branch convention (a deliberate divergence): the public remote tracks **`main`** only — a clean
+> branch safe to publish; **`master`** is the private full dev history, kept local. Push `main`,
+> never `master`/tags. First public push + first Show HN launched 2026-06-28 (see [[log]]).
 
 **What it is:** the homestead brain — an OpenAI-compatible agent (qwen3:14b on Ollama) with
 tools (home/media/memory/records/reminder/search/status/weather), a deterministic skills

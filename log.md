@@ -52,3 +52,11 @@ Append-only. One dated line per ingest / decision / lint pass. Newest at the bot
   consensus = Hestia's lineage). **Constellation-relevant finding:** *Mind the Farm* (talk-to-your-
   homestead-records SaaS) validates demand for the planned sensing→homestead ligament — Forager
   pest/plant ID → HA alerts surfacing through Hestia's `records` tool. See [[ligaments]].
+- **2026-06-28 — [[hestia]] went public + first Show HN.** First public push of the constellation:
+  Hestia open-sourced under **AGPL-3.0** at github.com/thefullnacho/hestia (clean `main` branch;
+  private `master` keeps the full dev history). Launched as a **Show HN** ("a local-first home
+  assistant that trusts timers over the LLM") — the constellation's first real discovery push. The
+  lead hook is the [[brand-thesis]] *decloudify / local-first, no-cloud* pillar (runs a local LLM on
+  your own box, nothing exposed to the internet), so the brand framing carries straight into the
+  product pitch. AGPL chosen deliberately: copyleft keeps it open even when run as a network
+  service, while asking nothing of home self-hosters (leaves dual-licensing open later).
