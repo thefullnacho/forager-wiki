@@ -60,3 +60,13 @@ Append-only. One dated line per ingest / decision / lint pass. Newest at the bot
   your own box, nothing exposed to the internet), so the brand framing carries straight into the
   product pitch. AGPL chosen deliberately: copyleft keeps it open even when run as a network
   service, while asking nothing of home self-hosters (leaves dual-licensing open later).
+- **2026-06-29 — [[hestia]] voice goes to real hardware: HA Voice PE kitchen satellite live.**
+  The room mic the [[hestia-phase3-voice]] staging waited on is onboarded and working end-to-end,
+  **fully local**: "Okay Nabu" (on-device wake) → faster_whisper → `conversation.hestia` (qwen3:14b)
+  → piper, spoken back in the kitchen — chose *Full Local Processing*, declined HA Cloud. Notable
+  cross-cutting point: it runs on **Nabu Casa's own Voice PE hardware but with Hestia's brain**, which
+  is the live embodiment of the [[brand-thesis]] decloudify pillar and exactly the wedge `MARKET.md`
+  named (Nabu owns the house + the hardware but ships a thin/loop-owning brain → Hestia drops its
+  own brain into that same hardware). Setup gotchas (HA `internal_url` was advertising the Tailscale
+  name to a LAN-only device; red ring = hardware mute) are repo/ops detail — kept in-repo + hestia's
+  `memory/`, not copied up here per schema.

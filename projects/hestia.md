@@ -8,8 +8,10 @@
 
 **What it is:** the homestead brain — an OpenAI-compatible agent (qwen3:14b on Ollama) with
 tools (home/media/memory/records/reminder/search/status/weather), a deterministic skills
-router, a file-based memory system, and a **voice loop** (Wyoming STT/TTS + a browser mic in the
-chat PWA, plus the HA Assist pipeline). Runs as user-systemd services on the GPU box. Deep
+router, a file-based memory system, and a **voice loop** (Wyoming STT/TTS, a browser mic in the
+chat PWA, the HA Assist pipeline, and a **HA Voice PE** kitchen satellite — live 2026-06-29,
+full-local: wake word → whisper → hestia → piper, nothing to cloud). Runs as user-systemd
+services on the GPU box. Deep
 internal docs live in-repo (`ARCHITECTURE.md`, `AUDIT.md`, `memory/`) — defer to them.
 
 **Why it's in this wiki (member, not neighbour):** it shares the dev box with [[forager-ml]] and
