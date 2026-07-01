@@ -70,3 +70,10 @@ Append-only. One dated line per ingest / decision / lint pass. Newest at the bot
   own brain into that same hardware). Setup gotchas (HA `internal_url` was advertising the Tailscale
   name to a LAN-only device; red ring = hardware mute) are repo/ops detail — kept in-repo + hestia's
   `memory/`, not copied up here per schema.
+- **2026-07-01 — new shared entity [[anti-slop-principle]].** Named the constellation-wide "model
+  on a short leash" stance and linked it as the *engineering* sibling of [[brand-thesis]]'s "abstain
+  over bluff." Same tenet, per-repo flavor: [[hestia]] determinism-over-intelligence (grounding not
+  recall, deterministic skill routing, eval-backed 14B-over-30B), [[forager-ml]]/[[forager-field-station]]
+  refuse-when-unsure (deadly-mushroom veto), [[homesteader-labs-site]] the outward framing. Added to
+  [[index]]; back-linked from [[brand-thesis]] and [[hestia]]. Prompted by framing the defense to
+  "isn't Hestia just AI slop orchestration with a chatbox" — the answer *is* this principle.

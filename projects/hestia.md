@@ -22,6 +22,10 @@ to surface.
 **Boundary:** owns home control, conversation, memory, and the voice plumbing. Its own `memory/`
 dir is hestia's *local* wiki — this constellation wiki links to it, never duplicates it.
 
+**Design stance:** hestia is the constellation's clearest expression of [[anti-slop-principle]] —
+"determinism over intelligence": the LLM does judgment + conversation, while schedules, thresholds,
+records, and skill-routing are deterministic scaffolding around it.
+
 **Edges** ([[ligaments]]):
 - Shares the RTX 5080 + 4060 Ti box and the CUDA library-path gotcha with [[forager-ml]] — see
   [[dev-box-and-cuda]]. (2026-06-22: the `libcublas.so.12` LD_LIBRARY_PATH fix for hestia's

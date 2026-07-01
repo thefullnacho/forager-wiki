@@ -13,7 +13,9 @@ tools-not-fluff practicality.
 The model ([[model-registry]]) **refuses when it isn't sure** rather than guessing. The framing
 that unifies the ML and the brand: a forager in the woods has no signal, so a small on-device
 model isn't a compromise — it's the only thing that works. This "abstain over bluff" stance is
-both a safety property (deadly-vetoes-safe) and a brand value. Keep them aligned.
+both a safety property (deadly-vetoes-safe) and a brand value. Keep them aligned. This "abstain
+over bluff" instinct is the *outward* face of [[anti-slop-principle]] — the same stance expressed
+as engineering across the constellation (hestia's determinism-over-intelligence, forager's refusal).
 
 ## Voice
 The site carries the canonical voice system: `voice.md`, `newsletter-voice.md`, `about-me.md`

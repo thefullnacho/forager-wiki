@@ -15,6 +15,7 @@ The relationships between projects live in [[ligaments]].
 - [[edge-hardware]] — Hailo 8L / Pi 5 `forager-dev` / the WALKING MAN PRO handheld.
 - [[dev-box-and-cuda]] — the shared RTX 5080 + 4060 Ti box and the recurring CUDA library-path gotcha.
 - [[brand-thesis]] — caloric security / off-grid / "refuses when unsure" + the brand voice.
+- [[anti-slop-principle]] — the shared "model on a short leash" stance; hestia's determinism-over-intelligence and forager's abstain-over-bluff are one tenet.
 
 ## Playbooks (repeatable workflows for any project)
 - [[brag-video]] — point `/brag` at any repo → a 15–25s polished launch clip / vertical reel from its own UI.
