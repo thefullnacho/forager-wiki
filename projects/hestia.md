@@ -7,8 +7,10 @@
 > never `master`/tags. First public push + first Show HN launched 2026-06-28 (see [[log]]).
 
 **What it is:** the homestead brain — an OpenAI-compatible agent (qwen3:14b on Ollama) with
-tools (home/media/memory/records/reminder/search/status/weather), a deterministic skills
-router, a file-based memory system, and a **voice loop** (Wyoming STT/TTS, a browser mic in the
+ten tools (home/media/memory/records/recipe/reminder/search/shopping/status/weather), a
+deterministic skills router, a file-based memory system, proactive timers (morning briefing,
+garden + pest watch, a nightly **house journal** feeding a self-regenerating seasonal
+**almanac**), and a **voice loop** (Wyoming STT/TTS, a browser mic in the
 chat PWA, the HA Assist pipeline, and a **HA Voice PE** kitchen satellite — live 2026-06-29,
 full-local: wake word → whisper → hestia → piper, nothing to cloud). Runs as user-systemd
 services on the GPU box. Deep
@@ -30,5 +32,8 @@ records, and skill-routing are deterministic scaffolding around it.
 - Shares the RTX 5080 + 4060 Ti box and the CUDA library-path gotcha with [[forager-ml]] — see
   [[dev-box-and-cuda]]. (2026-06-22: the `libcublas.so.12` LD_LIBRARY_PATH fix for hestia's
   whisper service is the same bug-family forager_ml flags in its README.)
-- **Planned:** consume a pest model from [[homesteader-labs-site]] / [[forager-ml]] and raise HA
-  alerts — the ligament that ties sensing to the homestead. VERIFY source; see [[ligaments]].
+- **LIVE (2026-07-01):** consumes two site datasets from [[homesteader-labs-site]] —
+  `pest-companions.json` (GDD-driven pest-emergence alerts via HA) and `frost-zones.json`
+  (NOAA normals for the almanac's observed-vs-normal frost lines). Vendored snapshots, not
+  hard links; see [[ligaments]]. A Forager-trained *vision* pest/plant model stays the future
+  upgrade path ([[forager-ml]]).

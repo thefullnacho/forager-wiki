@@ -29,5 +29,6 @@ content. No backend DB: static JSON, MDX, and client-side localStorage. Has a st
 **Edges** ([[ligaments]]):
 - **Sells** the hardware [[forager-ml]] deploys to — the WALKING MAN PRO handheld; see [[edge-hardware]].
 - Source of the [[brand-thesis]] + voice inherited by every other project's outward writing.
-- **Planned:** supplies a "pest model" to [[hestia]] for HA pest alerts — VERIFY: no pest artifact
-  exists yet; crop/companion-planting JSON is the likely raw material. See [[ligaments]].
+- **LIVE (2026-07-01):** supplies two datasets to [[hestia]] — `pest-companions.json` (pest-watch
+  emergence alerts) and `frost-zones.json` (almanac frost normals), both vendored snapshots on
+  hestia's side. The site stays the source of truth. See [[ligaments]].

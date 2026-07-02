@@ -77,3 +77,19 @@ Append-only. One dated line per ingest / decision / lint pass. Newest at the bot
   refuse-when-unsure (deadly-mushroom veto), [[homesteader-labs-site]] the outward framing. Added to
   [[index]]; back-linked from [[brand-thesis]] and [[hestia]]. Prompted by framing the defense to
   "isn't Hestia just AI slop orchestration with a chatbox" — the answer *is* this principle.
+- **2026-07-01 — first data ligaments go LIVE: [[homesteader-labs-site]] → [[hestia]] ×2.** The
+  pest-alert edge shipped exactly as pinned on 2026-06-23 (*data, not a model*): hestia vendors
+  the site's `pest-companions.json` and runs a fully deterministic GDD spine — biofix = last
+  spring frost *observed* in the Open-Meteo archive (2026: Apr 21), soil temp estimated from
+  trailing air temp, one alert per pest per season on the 7am garden push. Mid-season first run
+  marked 20 already-open windows silently instead of flooding. A second, unplanned ligament
+  landed the same day: `frost-zones.json` (the site's NOAA 1991-2020 normals) now feeds hestia's
+  new **almanac** — a nightly-regenerated season page (observed-vs-normal frost, GDD, garden
+  timeline, wildlife firsts) with per-season JSON snapshots so year-over-year self-assembles
+  from 2027. Paired with a nightly **house journal** (deterministic day-facts, resident model
+  phrases; records event is canonical). Both are [[anti-slop-principle]] all the way down — the
+  LLM only ever *phrases*. Field note worth keeping: a year of bird feeding has produced a
+  resident garden patrol (5 chickadees, 4 titmice, jays, catbirds, robins) and pest pressure has
+  stayed mitigated — logged in hestia's records as this season's working theory, testable
+  against pest-window outcomes next year. Ops detail (fixed backup leg, off-site watchdog,
+  shopping tool) stays in-repo + hestia's `memory/` per schema.
