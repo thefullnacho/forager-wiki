@@ -16,6 +16,7 @@ The relationships between projects live in [[ligaments]].
 - [[dev-box-and-cuda]] — the shared RTX 5080 + 4060 Ti box and the recurring CUDA library-path gotcha.
 - [[brand-thesis]] — caloric security / off-grid / "refuses when unsure" + the brand voice.
 - [[anti-slop-principle]] — the shared "model on a short leash" stance; hestia's determinism-over-intelligence and forager's abstain-over-bluff are one tenet.
+- [[funding]] — the money ledger: NLnet (site, pending) + FUTO (hestia, sent 2026-07-03) + HF hackathon (field-station, results 2026-07-10); watchlist incl. WILDLABS Jan 2027.
 
 ## Playbooks (repeatable workflows for any project)
 - [[brag-video]] — point `/brag` at any repo → a 15–25s polished launch clip / vertical reel from its own UI.

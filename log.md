@@ -93,3 +93,12 @@ Append-only. One dated line per ingest / decision / lint pass. Newest at the bot
   stayed mitigated — logged in hestia's records as this season's working theory, testable
   against pest-window outcomes next year. Ops detail (fixed backup leg, off-site watchdog,
   shopping tool) stays in-repo + hestia's `memory/` per schema.
+
+- **2026-07-03 — ingest: [[funding]] entity page created.** Funding went cross-cutting this
+  week (three applications across three different projects), so it earned a page: NLnet $18K
+  for the site (pending, decides ~fall), FUTO for hestia ("Let's unplug Alexa", sent today),
+  HF/Gradio hackathon for field-station (results 2026-07-10). Fresh research added the
+  Arduino×Qualcomm Hackster contest (open to 2026-08-31) and the WILDLABS Awards
+  ($10K/$50K, Arm-backed, edge-AI species ID — 2026 missed, EOI ~Jan 2027) as the standout
+  [[forager-ml]] match. Principle recorded: one project per application, drafts stay
+  private in-repo, the ledger lives here. index.md updated.
