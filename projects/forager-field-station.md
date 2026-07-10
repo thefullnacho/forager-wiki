@@ -4,7 +4,8 @@
 
 **What it is:** "Forager's Field Station" — photograph a wild plant/mushroom and a small
 on-device-class model identifies it *or abstains when unsure*. The Space is the **CPU twin** of
-the [[forager-ml]] on-device stack, built for the Build Small Hackathon (Backyard AI track).
+the [[forager-ml]] on-device stack, built for the Build Small Hackathon (Backyard AI track;
+submitted, **did not place** — results 2026-07-10, see [[funding]]).
 Demo video + `@thefullnacho` X thread linked in its README.
 
 **Boundary:** serving/UX + the public face of the model. Runs ONNX exports (`models/*_logits.onnx`)

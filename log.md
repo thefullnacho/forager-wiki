@@ -117,3 +117,12 @@ Append-only. One dated line per ingest / decision / lint pass. Newest at the bot
   LINT spotted (left for a pass): index.md "Open threads" still lists the pest-alert ligament as
   having no source artifact, but it went LIVE 2026-07-01 per [[ligaments]].
 
+- **2026-07-10 — result: HF/Gradio "build small" hackathon — [[forager-field-station]] did not
+  place.** Ledger updated in [[funding]] (entry moved In flight → Resolved); [[index]] one-liner
+  and the project page annotated. No winnings, so hestia's NAS/bulk-storage plan stays gated per
+  the earmark principle. The submission artifacts all shipped and remain live (Space, published
+  weights, demo video, FIELD_NOTES) — the edge-abstention pitch is reusable for the WILDLABS
+  (EOI ~Jan 2027) and Arduino×Qualcomm Hackster (to 2026-08-31) entries on the watchlist.
+  Winner intel recorded in [[funding]]: the track went to daily-use consumer tools with
+  instantly demoable UX (workout tracker 1st; CCTV monitoring; scam-defense) — niche-domain
+  depth didn't carry, note for how to pitch the next one.

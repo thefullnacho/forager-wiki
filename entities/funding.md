@@ -5,7 +5,7 @@ applications deliberately do NOT overlap: each ask is scoped to one project so t
 never compete for the same story. Application/correspondence *drafts* stay private in
 each repo (e.g. hestia's gitignored `outreach/`); this page is the cross-project ledger.
 
-## In flight (as of 2026-07-03)
+## In flight (as of 2026-07-10)
 
 - **NLnet (NGI Zero Commons Fund)** — **$18K toward [[homesteader-labs-site]] /
   HomesteaderLabs**, applied ~late Feb 2026. The 2026-06-16 announcement covered the
@@ -15,8 +15,20 @@ each repo (e.g. hestia's gitignored `outreach/`); this page is the cross-project
   to **[[hestia]]** only. Ask = packaging/install paths; sustainability note = premium
   home-install retainer underwrites the free version. No dollar figure (their process:
   email, they guide). Awaiting reply.
+## Resolved
+
 - **Gradio / Hugging Face "build small" hackathon** — **[[forager-field-station]]**
-  submitted; **results 2026-07-10**.
+  submitted; results announced **2026-07-10**: **did not place.** The build stands on its
+  own (Space, published weights, demo video, FIELD_NOTES writeup all shipped), and the
+  same edge-abstention story is reusable for WILDLABS / Hackster entries below. No
+  winnings → hestia's NAS/bulk-storage plan stays gated (see Principles).
+  - *What won the Backyard track (per Alex, 2026-07-10):* 1st = a workout app (movement
+    tracking + exercise suggestions, very polished); also placed: CCTV stream monitoring
+    (loitering / theft / package detection) and a scam-defense tool (paste a text/call →
+    scam-or-not breakdown). Takeaway for future entries: all three are daily-use,
+    everyone-has-this-problem tools with instantly demoable UX — foraging is a niche
+    audience with a slow payoff, so lead future hackathon pitches with the demo moment
+    and the broadest possible user, not the domain depth.
 
 ## Open now, unentered
 
