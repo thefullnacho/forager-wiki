@@ -36,3 +36,18 @@ another. This page is the canonical list of those edges; each project page links
   snapshots per-season JSON so year-over-year comparisons self-assemble from 2027 on.
 
 ## Planned edges (roadmap — not built)
+
+The future edges that climb toward [[north-star]]. Each maps to a rung; each is independently useful.
+
+- **[[forager-ml]] / [[hestia]] → [[edge-hardware]]** *(convergence, R2)*: merge hestia's memory +
+  a light judgment loop onto the Pi 5 handheld so the field device *remembers* sightings (with
+  GPS / offline maps), not just classifies. The two halves of the field brain onto one body.
+- **[[edge-hardware]] → [[homesteader-labs-site]]** *(data intake, R1)*: opt-in field sightings
+  from shipped handhelds flow back as the open-research dataset (forager images + the own-collected
+  days-to-maturity moat). The device becomes a consented sensor; the site owns the collection + license.
+- **[[edge-hardware]] sensor hub** *(R3)*: low-power BLE environmental sensors (temp / humidity /
+  soil / air) fuse with vision on-device — the modular V2 hub.
+- **[[edge-hardware]] mesh** *(R4)*: Meshtastic / LoRa (HELTEC already in the site catalog) →
+  offline sighting/hazard sharing across a mesh, no cloud.
+- **R5 (summit):** body / biometric sensors + powered backpack; the Pi 5 as the engine fusing all
+  of the above + on-device judgment. See [[north-star]].

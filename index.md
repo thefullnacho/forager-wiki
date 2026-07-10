@@ -2,7 +2,10 @@
 
 The cross-project knowledge layer for the **Forager / Homesteader Labs** constellation: four
 repos that overlap and inherit from one another. Read [[CLAUDE]] for how this wiki is maintained.
-The relationships between projects live in [[ligaments]].
+The relationships between projects live in [[ligaments]]; where they're all converging lives in [[north-star]].
+
+## North star (the destination)
+- [[north-star]] — the wearable/backpack **field brain** the four repos climb toward, and the 6-rung ladder to it (R0 foundation is DONE; R5 is the powered pack). [[ligaments]] is the present wiring; this is the future one.
 
 ## Projects
 - [[hestia]] — the homestead brain: HA-integrated agent (LLM + tools + voice) on the GPU box. Member, not neighbour.

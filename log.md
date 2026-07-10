@@ -102,3 +102,18 @@ Append-only. One dated line per ingest / decision / lint pass. Newest at the bot
   ($10K/$50K, Arm-backed, edge-AI species ID — 2026 missed, EOI ~Jan 2027) as the standout
   [[forager-ml]] match. Principle recorded: one project per application, drafts stay
   private in-repo, the ledger lives here. index.md updated.
+
+- **2026-07-08 — ingest: [[north-star]] page created; roadmap edges filled.** The "lofty goal"
+  (wearable/backpack **field brain** — a Pi 5 fusing plant/fungi ID + environmental sensors +
+  body sensors + offline maps + mesh comms + on-device judgment) had no wiki home, and the
+  "Planned edges" section of [[ligaments]] was empty — that gap is *why* the vision kept feeling
+  like it lived only in Alex's head. Distilled from the site repo's `HomesteaderLabsProjectSummary.md`
+  (2025-11-01, where the powered backpack was the *original* concept, pivoted to the handheld to
+  de-risk), reframed as a **6-rung ladder** (R0 foundation DONE → R5 summit), confirmed by Alex
+  2026-07-08. Key reframe on record: the field brain is **two already-built halves** —
+  [[forager-ml]] sensing (abstains when unsure) + [[hestia]] judgment (local voice loop) — so the
+  summit is *convergence, not invention*. Operating mode named: open-research / data-first, tools =
+  intake valve, each rung compounds the data moat. [[index]] + [[ligaments]] planned-edges updated.
+  LINT spotted (left for a pass): index.md "Open threads" still lists the pest-alert ligament as
+  having no source artifact, but it went LIVE 2026-07-01 per [[ligaments]].
+
