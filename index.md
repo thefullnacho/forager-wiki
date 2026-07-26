@@ -28,3 +28,5 @@ The relationships between projects live in [[ligaments]]; where they're all conv
 - DIVERGENCE: field-station serves 3 experts (psychedelics omitted by intent); forager_ml trains 4 — see [[model-registry]].
 - VERIFY: field-station serves `domain_router_v2`; forager_ml's published manifest is `domain_router` (v1) — which is canonical? [[model-registry]]
 - TODO: the planned [[hestia]] ← pest-alert ligament has no source artifact yet — see [[ligaments]].
+- DIVERGENCE: pest GDD biofixes disagree — hestia accumulates from observed last frost (Apr 21, 1500 GDD on Jul 25), while the site and the published extension thresholds use Jan 1 (1608 GDD, same day and place). Windows open ~108 GDD late. [[ligaments]]
+- VERIFY: `pest-companions.json` thresholds (100 colorado-beetle/cabbage-worm, 150 hornworm) are unsourced and cannot be base-50-from-Jan-1 figures; sourcing is parked. [[ligaments]]

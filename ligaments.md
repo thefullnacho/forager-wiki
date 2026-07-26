@@ -28,6 +28,28 @@ another. This page is the canonical list of those edges; each project page links
   air temp, and pushes an HA alert once per pest per season when a window opens — companions
   advice included. Fully deterministic (no LLM; the [[anti-slop-principle]] flavor of hestia).
   Spec + limitations: `hestia/brain/PEST_WATCH.md`.
+  - **2026-07-26, falsified in the field and fixed.** `_in_window` treated a *missing*
+    `gddThreshold` as "open" (`... if "gddThreshold" in pest else True`), so pests with no
+    threshold fell through to the soil-temp fallback and sat open from spring onward. Every aphid
+    entry deliberately has no threshold, because aphids are continuous and multi-generational with
+    no emergence event to predict. Result: the 2026 almanac logged **seven aphid windows opened
+    across the season while the lot saw no aphids at all**. The table now carries
+    `alertable: false` (+ `notAlertableReason`) on the 7 aphid and 2 nematode rows, and hestia
+    honours it before either gate. Regression test:
+    `brain/tests/test_pest_watch.py::test_alertable_false_never_opens_a_window`.
+  - **DIVERGENCE (open): the two repos use different biofixes.** Hestia accumulates GDD from the
+    observed last-frost biofix (2026: Apr 21, reading 1500 GDD on Jul 25). The published extension
+    thresholds the table is *meant* to hold are base 50 **accumulated from Jan 1** (squash vine
+    borer 900-1000, Japanese beetle 1030 with a 100 °F cutoff); the site's
+    `lib/growingDegreeDays.ts` reads 1608 for the same day and place. Comparing a last-frost
+    accumulation against a Jan-1 threshold opens windows **late** by ~108 GDD, which is 4-5 days
+    in July but weeks in spring. Pick one convention before the thresholds are sourced.
+  - **VERIFY: the thresholds in the table are unsourced.** `100` for colorado-beetle and
+    cabbage-worm and `150` for hornworm cannot be base-50-from-Jan-1 figures; the lot stood at
+    1608 GDD on Jul 25, so a threshold of 100 would have been crossed in April and every pest
+    would read active all summer. Also inconsistent: `cabbage:cabbage-worm` carries 100 while
+    `broccoli:cabbage-worm` and `kale:cabbage-worm` carry none. Sourcing is parked — see
+    `homesteader-labs-next/docs/PEST_ALERT_FEED_SPEC.md`.
 - **[[homesteader-labs-site]] → [[hestia]]** *(frost normals — LIVE 2026-07-01)*: second data
   ligament, same vendoring pattern. The site's `content/frost-zones.json` (NOAA 1991-2020
   frost-date normals by USDA zone, built for `frostNormals.ts`) is consumed by hestia's
