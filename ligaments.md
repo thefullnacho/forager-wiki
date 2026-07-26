@@ -37,19 +37,14 @@ another. This page is the canonical list of those edges; each project page links
     `alertable: false` (+ `notAlertableReason`) on the 7 aphid and 2 nematode rows, and hestia
     honours it before either gate. Regression test:
     `brain/tests/test_pest_watch.py::test_alertable_false_never_opens_a_window`.
-  - **DIVERGENCE (open): the two repos use different biofixes.** Hestia accumulates GDD from the
-    observed last-frost biofix (2026: Apr 21, reading 1500 GDD on Jul 25). The published extension
-    thresholds the table is *meant* to hold are base 50 **accumulated from Jan 1** (squash vine
-    borer 900-1000, Japanese beetle 1030 with a 100 °F cutoff); the site's
-    `lib/growingDegreeDays.ts` reads 1608 for the same day and place. Comparing a last-frost
-    accumulation against a Jan-1 threshold opens windows **late** by ~108 GDD, which is 4-5 days
-    in July but weeks in spring. Pick one convention before the thresholds are sourced.
-  - **VERIFY: the thresholds in the table are unsourced.** `100` for colorado-beetle and
-    cabbage-worm and `150` for hornworm cannot be base-50-from-Jan-1 figures; the lot stood at
-    1608 GDD on Jul 25, so a threshold of 100 would have been crossed in April and every pest
-    would read active all summer. Also inconsistent: `cabbage:cabbage-worm` carries 100 while
-    `broccoli:cabbage-worm` and `kale:cabbage-worm` carry none. Sourcing is parked — see
-    `homesteader-labs-next/docs/PEST_ALERT_FEED_SPEC.md`.
+  - **Biofix divergence, RESOLVED 2026-07-26 → [[gdd-convention]].** The repos were computing two
+    different quantities under one name and comparing across them: hestia accumulated from the
+    observed last frost (Apr 21, 1500 GDD on Jul 25) while the thresholds assume Jan 1 (1608 GDD,
+    same day and place), opening windows ~108 GDD late. Lane picked: **pest thresholds are base 50
+    from Jan 1**, since we consume published thresholds and cannot restate them. Hestia's
+    last-frost figure survives as *season GDD* for the almanac, and must compute pest GDD
+    separately for alerting. Conventions, sourced thresholds and citations now live in
+    [[gdd-convention]]; this ligament defers to it.
 - **[[homesteader-labs-site]] → [[hestia]]** *(frost normals — LIVE 2026-07-01)*: second data
   ligament, same vendoring pattern. The site's `content/frost-zones.json` (NOAA 1991-2020
   frost-date normals by USDA zone, built for `frostNormals.ts`) is consumed by hestia's

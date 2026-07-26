@@ -126,3 +126,24 @@ Append-only. One dated line per ingest / decision / lint pass. Newest at the bot
   Winner intel recorded in [[funding]]: the track went to daily-use consumer tools with
   instantly demoable UX (workout tracker 1st; CCTV monitoring; scam-defense) — niche-domain
   depth didn't carry, note for how to pitch the next one.
+
+- **2026-07-26 — pest-alert ligament falsified on the lot; GDD lane picked.** Field observation
+  caught a defect no review would have: the 2026 [[hestia]] almanac reported seven aphid windows
+  opened across the season while the property saw no aphids at all. Cause was one line in
+  `pest_watch._in_window`, which treated a *missing* `gddThreshold` as "open"; aphid rows carry no
+  threshold on purpose, because aphids are continuous and multi-generational with no emergence
+  event to predict, so they fell through the soil-temp fallback and sat open from spring. A spot
+  check of 2025's hot zones found no parasitoid mummies either, so the population never built
+  rather than being eaten. Fixed both ends: the site's `pest-companions.json` now carries
+  `alertable: false` on the 7 aphid and 2 nematode rows, hestia honours it before either gate
+  (regression test added), windows at the reported state drop 20 → 11.
+  - **Decision, new page [[gdd-convention]]:** pest thresholds are **base 50 °F accumulated from
+    Jan 1**, because we consume published extension thresholds and cannot restate them in another
+    frame. This resolves the biofix DIVERGENCE by naming two quantities instead of one: *pest GDD*
+    (Jan 1, site) and *season GDD* (observed last frost, hestia's almanac). They read 1608 vs 1500
+    at the lot on Jul 25; comparing across them opened windows ~108 GDD late.
+  - Sourced and cited there: squash vine borer 900-1000 (genuine inter-source disagreement, publish
+    as a window whose width is *derived from local accumulation rate*, not a fixed day count) and
+    Japanese beetle 1030 with a 100 °F cutoff — cutoffs are per pest, not global.
+  - VERIFY carried forward: the table's existing `100`/`150` thresholds are unsourced and cannot be
+    base-50-from-Jan-1; `cabbage-worm` is also inconsistent across crops. Sourcing parked.

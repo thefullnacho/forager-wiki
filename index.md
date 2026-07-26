@@ -20,6 +20,7 @@ The relationships between projects live in [[ligaments]]; where they're all conv
 - [[brand-thesis]] — caloric security / off-grid / "refuses when unsure" + the brand voice.
 - [[anti-slop-principle]] — the shared "model on a short leash" stance; hestia's determinism-over-intelligence and forager's abstain-over-bluff are one tenet.
 - [[funding]] — the money ledger: NLnet (site, pending) + FUTO (hestia, sent 2026-07-03); HF hackathon (field-station) did not place (2026-07-10); watchlist incl. WILDLABS Jan 2027.
+- [[gdd-convention]] — pest thresholds are base 50 °F from Jan 1, full stop; season GDD (from observed last frost) is a different quantity with a different name. Sourced thresholds + citations live here.
 
 ## Playbooks (repeatable workflows for any project)
 - [[brag-video]] — point `/brag` at any repo → a 15–25s polished launch clip / vertical reel from its own UI.
@@ -28,5 +29,5 @@ The relationships between projects live in [[ligaments]]; where they're all conv
 - DIVERGENCE: field-station serves 3 experts (psychedelics omitted by intent); forager_ml trains 4 — see [[model-registry]].
 - VERIFY: field-station serves `domain_router_v2`; forager_ml's published manifest is `domain_router` (v1) — which is canonical? [[model-registry]]
 - TODO: the planned [[hestia]] ← pest-alert ligament has no source artifact yet — see [[ligaments]].
-- DIVERGENCE: pest GDD biofixes disagree — hestia accumulates from observed last frost (Apr 21, 1500 GDD on Jul 25), while the site and the published extension thresholds use Jan 1 (1608 GDD, same day and place). Windows open ~108 GDD late. [[ligaments]]
-- VERIFY: `pest-companions.json` thresholds (100 colorado-beetle/cabbage-worm, 150 hornworm) are unsourced and cannot be base-50-from-Jan-1 figures; sourcing is parked. [[ligaments]]
+- RESOLVED 2026-07-26: the pest-GDD biofix divergence. Lane picked — base 50 °F from Jan 1, because we consume published thresholds and cannot restate them. Hestia's last-frost accumulation stays, renamed as a separate quantity. [[gdd-convention]]
+- VERIFY: `pest-companions.json` thresholds (100 colorado-beetle/cabbage-worm, 150 hornworm) are unsourced and cannot be base-50-from-Jan-1 figures; sourcing is parked. [[gdd-convention]]
