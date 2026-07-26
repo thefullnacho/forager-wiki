@@ -30,4 +30,4 @@ The relationships between projects live in [[ligaments]]; where they're all conv
 - VERIFY: field-station serves `domain_router_v2`; forager_ml's published manifest is `domain_router` (v1) — which is canonical? [[model-registry]]
 - TODO: the planned [[hestia]] ← pest-alert ligament has no source artifact yet — see [[ligaments]].
 - RESOLVED 2026-07-26: the pest-GDD biofix divergence. Lane picked — base 50 °F from Jan 1, because we consume published thresholds and cannot restate them. Hestia's last-frost accumulation stays, renamed as a separate quantity. [[gdd-convention]]
-- VERIFY: `pest-companions.json` thresholds (100 colorado-beetle/cabbage-worm, 150 hornworm) are unsourced and cannot be base-50-from-Jan-1 figures; sourcing is parked. [[gdd-convention]]
+- RESOLVED 2026-07-26: pest thresholds sourced. Vine borer 900 (emergence) / 1000 (egg-laying), Japanese beetle 1030, cabbageworm 150, all base 50 from Jan 1 with citations. Colorado potato beetle needs an observed biofix so it cannot fire from a calendar; squash bug and hornworm have no citable threshold. [[gdd-convention]]

@@ -40,25 +40,63 @@ Hestia keeps its season GDD for the almanac. It must compute pest GDD separately
 
 ## Sources
 
-Thresholds sourced 2026-07-24, all base 50 °F from Jan 1:
+Sourced 2026-07-24, extended and corrected 2026-07-26. All base 50 °F from Jan 1 unless noted.
 
-| Pest | Threshold | Cutoff | Source |
+| Pest | Threshold | Cutoff | Sources agree? |
 |---|---|---|---|
-| Squash vine borer | 900-1000 | not specified | [Ohio State Extension](https://ohioline.osu.edu/factsheet/ent-0106), [UMass Amherst](https://ag.umass.edu/vegetable/fact-sheets/squash-vine-borer) |
-| Japanese beetle | 1030 (emergence continues to 2150) | 100 °F | [Iowa State Extension](https://crops.extension.iastate.edu/cropnews/2026/06/japanese-beetles-ahead-schedule-2026), [USA-NPN](https://www.usanpn.org/data/maps/forecasts/Japanese_beetle) |
+| Squash vine borer | **900** adults emerge, **1000** egg-laying begins | not specified | yes, 3 sources |
+| Japanese beetle | **1030** emergence starts, 2150 ends | **100 °F** | yes, 2 sources |
+| Imported cabbageworm | **150** first adult flight (peak 240, larvae through 630, 2nd flight 830) | not specified | yes |
+| Colorado potato beetle | 120-200 GDD **base 52** after an **observed first-adult biofix** | — | different frame, see below |
+| Squash bug, tomato hornworm | none publishable | — | no citable extension threshold |
 
-The 900-to-1000 spread on vine borer is genuine disagreement between sources, not a unit mismatch.
-Publish it as a window rather than a point, and **derive the window's width from the local
-accumulation rate** rather than picking a fixed number of days: the same 100 GDD is 4 days in July
-and 34 days in April at the same site.
+Sources: [Ohio State](https://ohioline.osu.edu/factsheet/ent-0106),
+[UMass Amherst](https://ag.umass.edu/vegetable/fact-sheets/squash-vine-borer),
+[Illinois Extension](https://extension.illinois.edu/blogs/good-growing/2015-06-16-growing-degree-days-what),
+[Iowa State](https://crops.extension.iastate.edu/cropnews/2026/06/japanese-beetles-ahead-schedule-2026),
+[USA-NPN](https://www.usanpn.org/data/maps/forecasts/Japanese_beetle),
+[UC IPM](https://ipm.ucanr.edu/PHENOLOGY/ma-import_cabbageworm.html),
+[Cornell IPM](https://cals.cornell.edu/integrated-pest-management/outreach-education/fact-sheets/colorado-potato-beetle-leptinotarsa-decemlineata-vegetable-ipm-fact-sheet).
+
+**Correction, 2026-07-26.** This page previously called the vine borer's 900-to-1000 spread
+"genuine disagreement between sources". It is not. **900 is adult emergence and 1000 is the start
+of egg-laying**, two sequential events, and the sources agree on both. That makes the interval more
+useful than a disagreement would be: it is the scouting window between the moths arriving and the
+damage starting. Still derive its width from the local accumulation rate rather than a fixed number
+of days, since the same 100 GDD is 4 days in July and 34 days in April at the same site.
+
+## Some pests cannot use a calendar biofix at all
+
+Colorado potato beetle is the worked example. Its published model counts **120-200 GDD at base 52
+from the first adult actually seen**. That is a scouting biofix, and no calendar accumulation can
+supply the observation it depends on. Converting it to a Jan-1 figure would mean re-deriving the
+phenology, which is the thing this page exists to forbid.
+
+So it carries `alertable: false` with a reason, alongside the continuous pests, for a different
+cause: not "no emergence event" but "the model needs an input we do not have".
+
+**This explains the numbers that looked impossible.** The table's original `100` for
+colorado-beetle and `150` for cabbage-worm were not wrong figures, they were *post-biofix figures
+compared against a Jan-1 accumulation*. Colorado potato beetle's 100 sits inside its real 120-200
+band. Same class of error as the hestia divergence, one layer down: defensible numbers, wrong frame.
+
+## What the data now carries
+
+Every published threshold in `pest-companions.json` states its own frame, because a bare number is
+unreproducible: `gddThreshold`, `gddBase`, `gddBiofix`, `gddEvent`, and a `source` URL. A test
+enforces it (`content/crops/pestCompanions.test.ts`).
+
+Two distinct reasons a pest carries `alertable: false`:
+
+1. **No emergence event.** Aphids are continuous and multi-generational; nematodes are
+   soil-resident. Falsified on the lot in 2026, see [[ligaments]].
+2. **Model needs an observed biofix.** Colorado potato beetle, above.
 
 ## Open
 
-- **VERIFY:** the thresholds already in `pest-companions.json` (`100` colorado-beetle and
-  cabbage-worm, `150` hornworm) are unsourced and cannot be base-50-from-Jan-1 — the lot stood at
-  1608 GDD on Jul 25, so 100 would have been crossed in April. Also inconsistent:
-  `cabbage:cabbage-worm` carries 100 while `broccoli:cabbage-worm` and `kale:cabbage-worm` carry
-  none. Sourcing is parked; see `homesteader-labs-next/docs/PEST_ALERT_FEED_SPEC.md`.
-- Pests with **no emergence event** (aphids, nematodes) carry `alertable: false` and take no
-  threshold. A GDD gate cannot predict a continuous population — see [[ligaments]] for how that
-  was falsified on the lot.
+- Squash bug and tomato hornworm have no citable extension threshold. Both fall back to the
+  soil-temp gate, which hestia labels lower confidence. Tomato hornworm previously carried an
+  unsourced `150`, which is also cabbageworm's first-flight figure and was probably copied.
+- Japanese beetle and squash vine borer are the two best-sourced pests we have, but Japanese beetle
+  is a generalist and does not map to a single crop row, so it is not yet in the table.
+- The feed itself remains parked, see `homesteader-labs-next/docs/PEST_ALERT_FEED_SPEC.md`.

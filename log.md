@@ -147,3 +147,22 @@ Append-only. One dated line per ingest / decision / lint pass. Newest at the bot
     Japanese beetle 1030 with a 100 °F cutoff — cutoffs are per pest, not global.
   - VERIFY carried forward: the table's existing `100`/`150` thresholds are unsourced and cannot be
     base-50-from-Jan-1; `cabbage-worm` is also inconsistent across crops. Sourcing parked.
+
+- **2026-07-26 (second pass) — pest thresholds sourced; one earlier claim corrected.** Queried five
+  extension sources across six pests to test convergence. Three converge cleanly on base 50 from
+  Jan 1: squash vine borer, Japanese beetle, imported cabbageworm. Recorded with citations, base,
+  biofix and the biological event each number marks, in [[gdd-convention]].
+  - **Correction:** the 900-to-1000 vine borer spread was written up as "genuine disagreement
+    between sources". It is not. 900 is adult emergence, 1000 is the start of egg-laying, two
+    sequential events the sources agree on. The interval is the scouting window, which is more
+    useful than a disagreement.
+  - **Colorado potato beetle does not fit the convention and should not be forced into it.** Its
+    model is 120-200 GDD at base 52 counted from the first adult actually seen. It now carries
+    `alertable: false` for a second, distinct reason: not "no emergence event" but "the model needs
+    an observation we cannot supply".
+  - This explains the figures that looked impossible: the table's `100` and `150` were post-biofix
+    numbers compared against a Jan-1 accumulation. Defensible values, wrong frame — the same error
+    as the hestia divergence, one layer down.
+  - Data changes: cabbageworm 100 → 150 and applied to all three brassicas, resolving the
+    cross-crop inconsistency; hornworm's unsourced 150 dropped to soil-temp only; squash vine borer
+    added to both squash crops, having been absent despite being the signature squash pest.
