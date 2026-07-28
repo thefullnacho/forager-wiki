@@ -42,9 +42,15 @@ another. This page is the canonical list of those edges; each project page links
     observed last frost (Apr 21, 1500 GDD on Jul 25) while the thresholds assume Jan 1 (1608 GDD,
     same day and place), opening windows ~108 GDD late. Lane picked: **pest thresholds are base 50
     from Jan 1**, since we consume published thresholds and cannot restate them. Hestia's
-    last-frost figure survives as *season GDD* for the almanac, and must compute pest GDD
-    separately for alerting. Conventions, sourced thresholds and citations now live in
-    [[gdd-convention]]; this ligament defers to it.
+    last-frost figure survives as *season GDD* for the almanac. Conventions, sourced thresholds
+    and citations now live in [[gdd-convention]]; this ligament defers to it.
+  - **Code shipped 2026-07-28.** `pest_watch` now carries two accumulators: `pest_gdd` from Jan 1
+    (gates alerts) and `cumulative_gdd` from the biofix (season GDD, feeds `almanac.py` and the
+    `journal.py` stamp, both unchanged). One archive pass feeds both. Pre-split state is replayed
+    from Jan 1 on first load, keeping `alerted` and taking the quiet first-run path, since anything
+    it opens today emerged weeks ago. Pinned by `test_pest_gdd_runs_from_jan_1_and_season_gdd_from_the_biofix`
+    and `test_alerts_gate_on_pest_gdd_not_season_gdd` in `hestia/brain/tests/test_pest_watch.py`.
+    The decision is now enforced rather than only recorded, which is what actually closes it.
 - **[[homesteader-labs-site]] → [[hestia]]** *(frost normals — LIVE 2026-07-01)*: second data
   ligament, same vendoring pattern. The site's `content/frost-zones.json` (NOAA 1991-2020
   frost-date normals by USDA zone, built for `frostNormals.ts`) is consumed by hestia's

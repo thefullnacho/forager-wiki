@@ -166,3 +166,26 @@ Append-only. One dated line per ingest / decision / lint pass. Newest at the bot
   - Data changes: cabbageworm 100 → 150 and applied to all three brassicas, resolving the
     cross-crop inconsistency; hornworm's unsourced 150 dropped to soil-temp only; squash vine borer
     added to both squash crops, having been absent despite being the signature squash pest.
+
+## 2026-07-28 — the biofix decision is now enforced, and a linter to keep it that way
+
+- **hestia: pest GDD split from season GDD, shipped.** `pest_watch` carries two base-50
+  accumulators: `pest_gdd` from Jan 1 (gates alerts, which is what published thresholds assume)
+  and `cumulative_gdd` from the observed biofix (season GDD, unchanged for `almanac.py` and the
+  `journal.py` stamp). One archive pass feeds both. Pre-split state replays from Jan 1 on first
+  load, keeping `alerted` and taking the quiet first-run path. 97 tests pass; two new ones pin the
+  split. `PEST_WATCH.md` updated. See [[ligaments]], [[gdd-convention]].
+- **The gap this closed was between the wiki and a repo, not between two repos.** This page and
+  [[index]] recorded the divergence as RESOLVED on 2026-07-26 while `pest_watch.py` still carried
+  an open `DIVERGENCE:` note, because the lane was picked and the code was not written. Both true,
+  about different things, and nothing reconciled them. A prose resolution is a claim about the
+  future; only a test makes it a claim about the present.
+- **Lint is now executable, not periodic.** Built `wikilint` (in the public `llm-wiki-schema`
+  repo): it checks this wiki against the repos it describes and exits non-zero on conflict.
+  `unresolved-downstream` found the drift above on its first run. `unpinned-decision` flags any
+  canonical page resolved in prose with no test holding it. This is the wiki finally getting its
+  own flavour of [[anti-slop-principle]]: the agent proposes, a deterministic check decides.
+- **VERIFY:** `dangling-canonical` reports that no repo cites [[anti-slop-principle]],
+  [[brand-thesis]], [[dev-box-and-cuda]], [[edge-hardware]], [[model-registry]] or [[funding]].
+  Expected for the stance and money pages; worth checking whether [[model-registry]] and
+  [[edge-hardware]] should be cited from the repos that implement them.
