@@ -189,3 +189,19 @@ Append-only. One dated line per ingest / decision / lint pass. Newest at the bot
   [[brand-thesis]], [[dev-box-and-cuda]], [[edge-hardware]], [[model-registry]] or [[funding]].
   Expected for the stance and money pages; worth checking whether [[model-registry]] and
   [[edge-hardware]] should be cited from the repos that implement them.
+
+## 2026-07-28 (later) — vendoring edges are now machine-checked
+
+- **Two `VENDORED:` declarations added to [[ligaments]]**, one per data ligament:
+  `content/crops/pest-companions.json` and `content/frost-zones.json`, each site copy paired with
+  its hestia consumer. New fourth marker alongside `VERIFY:`, `DIVERGENCE:` and `RESOLVED`.
+- **Why it is worth the ceremony.** Both edges are a `cp` plus a promise. If the site edits a
+  threshold, hestia keeps serving the old snapshot and nothing says so. `wikilint`'s new
+  `vendored-drift` reads both ends and compares them, so no marker is needed in either repo, which
+  matters because for this failure nobody knows in advance that there is anything to mark.
+- **Verified by breaking it on purpose:** clean, then a one-byte change to
+  `hestia/data/frost-zones.json`, which fired with byte counts and the first differing line, then
+  reverted byte-identical. Both copies are currently in sync.
+- **`wikilint.json` now covers all four repos** including the site. Its absence was the entire
+  source of the `broken-path` noise on the first run, which the new `config-error` check would now
+  report loudly rather than skipping in silence.

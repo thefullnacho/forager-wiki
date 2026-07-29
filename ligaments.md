@@ -28,6 +28,7 @@ another. This page is the canonical list of those edges; each project page links
   air temp, and pushes an HA alert once per pest per season when a window opens — companions
   advice included. Fully deterministic (no LLM; the [[anti-slop-principle]] flavor of hestia).
   Spec + limitations: `hestia/brain/PEST_WATCH.md`.
+  - VENDORED: `homesteader-labs-site/content/crops/pest-companions.json` -> `hestia/data/pest-companions.json`
   - **2026-07-26, falsified in the field and fixed.** `_in_window` treated a *missing*
     `gddThreshold` as "open" (`... if "gddThreshold" in pest else True`), so pests with no
     threshold fell through to the soil-temp fallback and sat open from spring onward. Every aphid
@@ -57,6 +58,7 @@ another. This page is the canonical list of those edges; each project page links
   **almanac** (`brain/almanac.py`) to render observed-vs-normal frost lines ("last freeze
   Apr 21 — 47 days later than the zone normal"). The almanac page regenerates nightly and
   snapshots per-season JSON so year-over-year comparisons self-assemble from 2027 on.
+  - VENDORED: `homesteader-labs-site/content/frost-zones.json` -> `hestia/data/frost-zones.json`
 
 ## Planned edges (roadmap — not built)
 
