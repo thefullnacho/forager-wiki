@@ -18,5 +18,10 @@ experts on val. Some YOLO-era artifacts (`runs/classify/`, `convert_yolo_to_hef.
 - Feeds [[forager-field-station]] (the Space is its CPU twin) — canonical stack in [[model-registry]].
 - Compiles to [[edge-hardware]] (Hailo 8L / Pi 5 `forager-dev`).
 - Shares the dev box + CUDA gotcha with [[hestia]] — see [[dev-box-and-cuda]].
+- **Shares `forager-obs` with [[forager-field-station]]** (2026-08-15) — the `toxic_as_edible`
+  rule and the harness plumbing. The one hard-link edge; schemas stay separate by design.
+  See [[observability-harness]].
+- **Inherits ops patterns from [[hestia]]** (2026-08-15) — `snapshot()`+`render()` and the
+  edge-triggered watchdog, in `ops/`. Shape inherited, code written against its own jobs.
 
 **DIVERGENCE:** trains a 4th `psychedelics_expert` that field-station omits; see [[model-registry]].

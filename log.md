@@ -281,3 +281,10 @@ Append-only. One dated line per ingest / decision / lint pass. Newest at the bot
   shell. `wait` errors instantly on a non-child and `|| true` swallowed it, so that wait never
   waited on any run. `retrain_router.sh` already knew this — its own comment says so and it polls
   `kill -0` instead — which is how the two scripts came to disagree with each other.
+
+## 2026-08-15 (wrap) — project pages caught up
+
+- [[forager-ml]] and [[forager-field-station]] pages now carry the `forager-obs` edge and, for
+  forager_ml, the ops-pattern inheritance from [[hestia]]. Both had been updated in
+  [[ligaments]] and [[observability-harness]] earlier today but not on their own pages.
+- No new edges invented in this pass; only back-links for edges already recorded.

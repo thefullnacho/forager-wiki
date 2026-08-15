@@ -16,7 +16,11 @@ gates). It does not train anything — models come from [[forager-ml]].
 `EXPERTS = [berry_expert, highvalue_expert, medicinals_expert]` — **3 experts**.
 
 **Edges** ([[ligaments]]): inherits its model stack from [[forager-ml]]; inherits brand framing
-from [[brand-thesis]] ("refuses when it isn't sure" is the hackathon's honest-fit angle).
+from [[brand-thesis]] ("refuses when it isn't sure" is the hackathon's honest-fit angle);
+**shares `forager-obs`** with [[forager-ml]] since 2026-08-15 — the `toxic_as_edible` rule and
+the harness plumbing, the one hard-link edge in the constellation. Its observability schema is
+session-grained (`n_photos` a first-class dimension) against forager_ml's image-grained one,
+and that difference is deliberate. See [[observability-harness]].
 
 **DIVERGENCE (intentional):** `psychedelics_expert` is omitted here **for optics** on the public
 Space, though forager_ml trains it. Decision recorded in [[model-registry]] — keep, don't "fix."
