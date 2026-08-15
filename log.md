@@ -288,3 +288,16 @@ Append-only. One dated line per ingest / decision / lint pass. Newest at the bot
   forager_ml, the ops-pattern inheritance from [[hestia]]. Both had been updated in
   [[ligaments]] and [[observability-harness]] earlier today but not on their own pages.
 - No new edges invented in this pass; only back-links for edges already recorded.
+
+## 2026-08-15 (ingest) — dev box display path + resident-model caveat
+
+- [[dev-box-and-cuda]] gains two facts found while setting up an unrelated game server on the
+  same workstation: until 2026-08-13 the monitor was on the **Ryzen iGPU**, not either NVIDIA
+  card, so every OpenGL app got a 512 MB device while two 16 GB cards idled. Cable moved to the
+  5080. Recorded because `CUDA_VISIBLE_DEVICES` governs compute only and says nothing about the
+  display path, which affects any GPU app on this box.
+- Same page: the "5080 hosts the resident LLM" claim now carries its caveat. `KEEP_ALIVE=-1`
+  pins a model once loaded but nothing loads it at boot, so the first request after a reboot pays
+  the load. [[hestia]]'s watchdog is blind to it; tracked in that repo.
+- `VERIFY:` flagged a CPU-model mismatch (page says 9950X3D, `lscpu` says 9950X).
+- No edges created, changed, or broken. [[ligaments]] untouched.

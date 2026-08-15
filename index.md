@@ -16,7 +16,7 @@ The relationships between projects live in [[ligaments]]; where they're all conv
 ## Shared entities (live in >1 repo)
 - [[model-registry]] — canonical router+experts stack; the psychedelics & router-version divergences.
 - [[edge-hardware]] — Hailo 8L / Pi 5 `forager-dev` / the WALKING MAN PRO handheld.
-- [[dev-box-and-cuda]] — the shared RTX 5080 + 4060 Ti box and the recurring CUDA library-path gotcha.
+- [[dev-box-and-cuda]] — the shared RTX 5080 + 4060 Ti box, the recurring CUDA library-path gotcha, and which GPU actually drives the display.
 - [[brand-thesis]] — caloric security / off-grid / "refuses when unsure" + the brand voice.
 - [[anti-slop-principle]] — the shared "model on a short leash" stance; hestia's determinism-over-intelligence and forager's abstain-over-bluff are one tenet.
 - [[funding]] — the money ledger: NLnet (site, pending) + FUTO (hestia, sent 2026-07-03); HF hackathon (field-station) did not place (2026-07-10); watchlist incl. WILDLABS Jan 2027.
