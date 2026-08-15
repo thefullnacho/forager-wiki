@@ -205,3 +205,38 @@ Append-only. One dated line per ingest / decision / lint pass. Newest at the bot
 - **`wikilint.json` now covers all four repos** including the site. Its absence was the entire
   source of the `broken-path` noise on the first run, which the new `config-error` check would now
   report loudly rather than skipping in silence.
+
+## 2026-08-15 — forager-obs extracted; the first hard-link edge
+
+- **New repo `~/Documents/Forager/forager-obs`**, editable-installed as a sibling by both Forager
+  observability harnesses. New page [[observability-harness]]; new edge in [[ligaments]];
+  `wikilint.json` now covers five repos.
+- **What drove it.** Both repos had their own implementation of `toxic_as_edible` — forager_ml a
+  property on `InferenceOutcome`, the Space inline in `SessionWriter` — with the flagship 0.0
+  claim resting on both. A safety metric defined twice can drift once and still read green in
+  both dashboards. `convergence.py` had already been hand-ported the same way.
+- **What was deliberately NOT merged: the schemas.** forager_ml is image-grained
+  (`inference_runs` + `expert_predictions`); the Space is session-grained (`sessions`, `n_photos`
+  a first-class dimension). They answer different questions. Recorded as intentional so a future
+  pass does not "fix" it.
+- **DIVERGENCE, intentional:** this is a hard link, not a vendored snapshot — the one exception to
+  the no-hard-link rule. That rule is for data, where a snapshot is diffable and `vendored-drift`
+  can check it. On executable logic a drift check cannot separate adaptation from drift, and
+  vendoring is exactly what failed here.
+- **Two latent bugs found by running it rather than reading it.** Both compose files bound host
+  port 5433 *and* derived the same Compose project name from their parent directory
+  (`observability` in both repos), so bringing up the second one silently RECREATED the first
+  repo's container. Now 5433/`forager-ml-obs` and 5434/`forager-fs-obs`, verified running side by
+  side for the first time.
+- **The Space was shipping its dev harness.** `deploy.py` excluded `scripts/*` but not
+  `observability/*`, so the whole harness was being uploaded to the public HF Space. Now excluded.
+  Verified the Space runtime never imported it: `app.py`, `pipeline/`, `game/` are clean.
+- **Verified end to end**, not just unit-tested: 36 new package tests, 11 forager_ml, 4
+  field-station observability, 4 two-photo — all green, against both live databases, with a row
+  written through the shared rule and read back out of `v_safety_regression`.
+- **VERIFY: `thefullnacho/forager-obs` does not exist on GitHub yet.** CI in both repos checks it
+  out beside the consuming repo, so the `observability` workflow fails on any push touching
+  `observability/**` until it is created and pushed. Local dev unaffected.
+- **Next candidate, not done:** `convergence.py` (single-expert routing, `DEADLY_VETO_FLOOR`,
+  `EXPERT_CONFIDENCE_THRESHOLD`) is still hand-ported, but it sits in the Space's *runtime* path,
+  so sharing it would make the Space depend on a pip install to boot. Needs a different mechanism.

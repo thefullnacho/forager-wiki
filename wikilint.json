@@ -1,13 +1,34 @@
 {
   "wiki": "~/Documents/Forager/forager-wiki",
   "index": "index.md",
-  "journal_pages": ["index.md", "log.md"],
-  "canonical_dirs": ["entities"],
+  "journal_pages": [
+    "index.md",
+    "log.md"
+  ],
+  "canonical_dirs": [
+    "entities"
+  ],
   "stale_verify_days": 90,
   "repos": [
-    {"name": "hestia", "path": "~/hestia"},
-    {"name": "forager_ml", "path": "~/Documents/Forager/forager_ml"},
-    {"name": "forager-field-station", "path": "~/Documents/Forager/forager-field-station"},
-    {"name": "homesteader-labs-site", "path": "~/Documents/Forager/homesteader_labs_site_v01/Homesteader_labs/homesteader-labs-next-CLEAN"}
+    {
+      "name": "hestia",
+      "path": "~/hestia"
+    },
+    {
+      "name": "forager_ml",
+      "path": "~/Documents/Forager/forager_ml"
+    },
+    {
+      "name": "forager-field-station",
+      "path": "~/Documents/Forager/forager-field-station"
+    },
+    {
+      "name": "forager-obs",
+      "path": "~/Documents/Forager/forager-obs"
+    },
+    {
+      "name": "homesteader-labs-site",
+      "path": "~/Documents/Forager/homesteader_labs_site_v01/Homesteader_labs/homesteader-labs-next-CLEAN"
+    }
   ]
 }

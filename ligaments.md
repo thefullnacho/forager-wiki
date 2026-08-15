@@ -12,6 +12,19 @@ another. This page is the canonical list of those edges; each project page links
 - **[[forager-ml]] → [[edge-hardware]] → [[homesteader-labs-site]]** *(hardware)*: forager_ml
   compiles to the Hailo 8L and deploys to the Pi 5 handheld; the site *sells* that handheld
   (WALKING MAN PRO). The model and the product are two ends of one object — see [[edge-hardware]].
+- **[[forager-ml]] ↔ [[forager-field-station]]** *(shared observability package — LIVE
+  2026-08-15)*: both harnesses install `~/Documents/Forager/forager-obs` as an editable sibling.
+  It holds the **`toxic_as_edible` rule** plus connect/migrate, the batch-writer contract and the
+  ImageFolder val-set walk. The two **schemas stay separate by design** (image-grained vs
+  session-grained with `n_photos`) — full detail in [[observability-harness]].
+  - **DIVERGENCE (intentional): this is a hard link, not a vendored snapshot.** The one edge that
+    breaks the no-hard-link rule. That rule is for *data*, where a snapshot is diffable and
+    `wikilint vendored-drift` can check it. Here vendoring is precisely what failed — a
+    hand-ported safety rule nobody knows to re-check — and a drift check on executable logic
+    cannot tell adaptation from drift. Reasoning in [[observability-harness]].
+  - VERIFY: CI in both repos checks out `thefullnacho/forager-obs`, **which does not exist yet**.
+    The `observability` workflow fails on any push touching `observability/**` until that repo is
+    created and pushed. Local dev unaffected.
 - **[[forager-ml]] ↔ [[hestia]]** *(shared dev box)*: both run on the same RTX 5080 + 4060 Ti
   machine; they share GPU-allocation discipline and the same class of CUDA library-path bug —
   see [[dev-box-and-cuda]].
