@@ -22,9 +22,9 @@ another. This page is the canonical list of those edges; each project page links
     `wikilint vendored-drift` can check it. Here vendoring is precisely what failed — a
     hand-ported safety rule nobody knows to re-check — and a drift check on executable logic
     cannot tell adaptation from drift. Reasoning in [[observability-harness]].
-  - VERIFY: CI in both repos checks out `thefullnacho/forager-obs`, **which does not exist yet**.
-    The `observability` workflow fails on any push touching `observability/**` until that repo is
-    created and pushed. Local dev unaffected.
+  - **RESOLVED 2026-08-15:** `thefullnacho/forager-obs` created (public, default branch `main`)
+    and pushed. CI in both repos checks it out beside the consuming repo; the path was verified
+    by anonymous clone + sibling editable install + the 36 shared safety tests.
 - **[[forager-ml]] ↔ [[hestia]]** *(shared dev box)*: both run on the same RTX 5080 + 4060 Ti
   machine; they share GPU-allocation discipline and the same class of CUDA library-path bug —
   see [[dev-box-and-cuda]].

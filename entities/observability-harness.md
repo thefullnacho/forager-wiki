@@ -63,11 +63,15 @@ shared dependency. Deliberate, and the reasoning is narrow:
 `deploy.py` excludes `observability/*` from the HF upload (added 2026-08-15 — it had
 been shipping the dev harness to the public Space).
 
-## VERIFY: the GitHub repo does not exist yet
+## The GitHub repo (RESOLVED 2026-08-15)
 
-CI in both repos checks out `thefullnacho/forager-obs` beside the consuming repo.
-Until that repo is created and pushed, the `observability` workflow will fail on
-any push touching `observability/**`. Local dev is unaffected. See [[ligaments]].
+`github.com/thefullnacho/forager-obs`, public, default branch `main`. Public
+matters: `actions/checkout` uses a token scoped to the repo running the job, so a
+private sibling would need a PAT secret in both consumers.
+
+CI in both repos checks it out beside the consuming repo. Verified by anonymous
+clone, sibling editable install from a consumer's cwd, and the 36 shared safety
+tests running from the cloned copy.
 
 ## Not yet shared: the abstention policy
 

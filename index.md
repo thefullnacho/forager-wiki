@@ -27,7 +27,7 @@ The relationships between projects live in [[ligaments]]; where they're all conv
 - [[brag-video]] — point `/brag` at any repo → a 15–25s polished launch clip / vertical reel from its own UI.
 
 ## Open threads (see `DIVERGENCE:` / `VERIFY:` items)
-- VERIFY: CI in both Forager repos now checks out `thefullnacho/forager-obs`, **which does not exist on GitHub yet** — the `observability` workflow fails on any push touching `observability/**` until it is created and pushed. Local dev unaffected. [[observability-harness]]
+- RESOLVED 2026-08-15: `thefullnacho/forager-obs` created (public, default branch `main`) and pushed. The CI path was verified by anonymous clone + sibling editable install + the 36 shared safety tests, so both repos' `observability` workflows go green on the next push. [[observability-harness]]
 - DIVERGENCE (intentional, 2026-08-15): the `forager-obs` edge is a hard link, not a vendored snapshot — the one exception to the no-hard-link rule, because vendoring a safety rule is what caused the drift it fixes. [[observability-harness]] [[ligaments]]
 - DIVERGENCE: field-station serves 3 experts (psychedelics omitted by intent); forager_ml trains 4 — see [[model-registry]].
 - VERIFY: field-station serves `domain_router_v2`; forager_ml's published manifest is `domain_router` (v1) — which is canonical? [[model-registry]]

@@ -264,3 +264,20 @@ Append-only. One dated line per ingest / decision / lint pass. Newest at the bot
   unverified", never as finished. Believing a failed overnight run is the expensive mistake.
 - 24 tests, stdlib only, no GPU/DB/model. New `ops` workflow — unlike `observability`, it runs
   green today since it needs no Postgres and no forager-obs checkout.
+
+## 2026-08-15 (later still) — forager-obs live; retrain PID fossils removed
+
+- **`thefullnacho/forager-obs` created and pushed** (public, default branch `main`, matching
+  forager_ml). Public is load-bearing: `actions/checkout` uses a token scoped to the repo running
+  the job, so a private sibling would need a PAT secret in both consumers. The VERIFY in
+  [[ligaments]] and [[observability-harness]] is resolved; CI path verified by anonymous clone +
+  sibling editable install from a consumer's cwd + the 36 shared safety tests from the clone.
+- **Both retrain scripts now wait on running jobs, not PID literals**, via a new
+  `ops.status --wait-for` over the same live-command-line detector. Third consumer of that one
+  collector, alongside the readout and the watchdog.
+- **`retrain_v2.sh` was broken twice over, and had been from the day it was written.** Beyond the
+  stale PIDs (which make `kill -0` fail so the guard falls open and training starts on a
+  half-downloaded dataset), it used `wait "$pid"` on processes that were never children of its
+  shell. `wait` errors instantly on a non-child and `|| true` swallowed it, so that wait never
+  waited on any run. `retrain_router.sh` already knew this — its own comment says so and it polls
+  `kill -0` instead — which is how the two scripts came to disagree with each other.
