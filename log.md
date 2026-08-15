@@ -240,3 +240,27 @@ Append-only. One dated line per ingest / decision / lint pass. Newest at the bot
 - **Next candidate, not done:** `convergence.py` (single-expert routing, `DEADLY_VETO_FLOOR`,
   `EXPERT_CONFIDENCE_THRESHOLD`) is still hand-ported, but it sits in the Space's *runtime* path,
   so sharing it would make the Space depend on a pip install to boot. Needs a different mechanism.
+
+## 2026-08-15 (later) — hestia's ops patterns ported into forager_ml
+
+- **New `forager_ml/ops/`**: `status.py` (`snapshot()` + `render()`) and `watchdog.py`
+  (edge-triggered ntfy). New pattern edge in [[ligaments]]: [[hestia]] → [[forager-ml]], the
+  first edge that transfers a *design* rather than data or a model. Nothing copied — the shape
+  is inherited, the code is written against forager_ml's own jobs.
+- **What it replaced.** `monitor_jobs.sh` tracked jobs by hardcoded PID literals
+  (`JOBS=("1271469:medicinals_expert:...")`) written down in one session. Dead at the first
+  reboot, the monitor was itself a `while true` process that could die unnoticed, and it exited
+  once its listed jobs finished so it never saw the next run. `status.sh`'s dataset-target
+  percentages (76000 / 19000) were a fossil too: both downloads finished months ago, so it
+  rendered 100% as if it were live progress.
+- **Related fossil, NOT fixed:** `retrain_v2.sh` still waits on PIDs 1238285 / 1238290 / 1238583
+  via `kill -0`. Those are long dead, so the guard now fails *open* — it skips the wait and
+  starts training immediately, which looks like it worked. Flagged, left alone, out of scope.
+- **Found by running it, not reading it:** the first collector matched the script name as a
+  substring anywhere in a command line, so a *shell* whose argv merely mentioned
+  `train_efficientnet_specialist.py` counted as a live training run — as did any grep or editor.
+  Now requires an interpreter in argv[0] plus the script as a whole argv token. Pinned by test.
+- **Design call worth keeping:** a job that ends with no readable log is reported as "ended,
+  unverified", never as finished. Believing a failed overnight run is the expensive mistake.
+- 24 tests, stdlib only, no GPU/DB/model. New `ops` workflow — unlike `observability`, it runs
+  green today since it needs no Postgres and no forager-obs checkout.

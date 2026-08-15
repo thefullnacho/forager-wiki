@@ -28,6 +28,15 @@ another. This page is the canonical list of those edges; each project page links
 - **[[forager-ml]] ↔ [[hestia]]** *(shared dev box)*: both run on the same RTX 5080 + 4060 Ti
   machine; they share GPU-allocation discipline and the same class of CUDA library-path bug —
   see [[dev-box-and-cuda]].
+- **[[hestia]] → [[forager-ml]]** *(ops patterns — LIVE 2026-08-15)*: a **pattern** edge, not
+  data and not a model. forager_ml's new `ops/` inherits two hestia designs: the
+  `snapshot()` + `render()` split from `brain/tools/status.py` (one collector, two consumers —
+  here the readout and the watchdog), and the edge-triggered ntfy watchdog from
+  `deploy/watchdog/`. Replaces `monitor_jobs.sh`, which tracked jobs by hardcoded PID literals.
+  Nothing is copied between the repos: the shape is inherited, the code is written against
+  forager_ml's own jobs. **Deliberately not ported:** running off-site. Hestia's watchdog probes
+  the house from the dedi because "the house is dark" cannot be reported from inside it;
+  forager_ml's jobs are local and the box is already covered by that same probe.
 - **[[homesteader-labs-site]] → all** *(brand + voice)*: the thesis (caloric security, off-grid,
   decloudify) and the brand voice (`voice.md`, `newsletter-voice.md`) are inherited whenever any
   project speaks outward — see [[brand-thesis]].
