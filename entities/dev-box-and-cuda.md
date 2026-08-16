@@ -3,6 +3,8 @@
 The single workstation that both [[forager-ml]] and [[hestia]] run on, and a bug-family that has
 now bitten both. Recording it once here saves the next debugging session in either repo.
 
+The coding agents and multiplexer that run on this box live in [[agent-runtime]].
+
 ## The box
 - **GPUs:** RTX **5080** (Blackwell, `sm_120`, 16 GB) — primary; RTX **4060 Ti** (Ada, `sm_89`,
   16 GB) — secondary. **CPU:** Ryzen 9 9950X3D. ~800 W combined under load (1000 W Gold PSU).

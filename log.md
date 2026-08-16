@@ -301,3 +301,17 @@ Append-only. One dated line per ingest / decision / lint pass. Newest at the bot
   the load. [[hestia]]'s watchdog is blind to it; tracked in that repo.
 - `VERIFY:` flagged a CPU-model mismatch (page says 9950X3D, `lscpu` says 9950X).
 - No edges created, changed, or broken. [[ligaments]] untouched.
+
+## 2026-08-16 — ingest: agent runtime on the shared dev box
+- New page [[agent-runtime]]: the four subscription-backed coding CLIs (Claude Code, grok, kimi,
+  agy) and the `herdr` v0.8.0 multiplexer installed on [[dev-box-and-cuda]] 2026-08-16. Recorded
+  here because it lives in dotfiles, not in any repo, so no repo's docs can own it.
+- grok CLI auth settled: it signs in with grok.com, so the existing X Premium sub covers it and no
+  separate xAI API billing is involved. Models `grok-4.6` (default) and `grok-4.5`.
+- The containment rule is restated and sharpened: `herdr` gives visibility, not containment. Its
+  blocked-on-permission signal never fires for headless kimi, which auto-approves and never asks.
+  Worktree isolation remains the only real boundary; grok is the safer headless worker because
+  isolation is a flag rather than a remembered ritual.
+- `VERIFY:` herdr is pre-1.0 from a 2026-formed company; pinned to the `stable` channel.
+- [[dev-box-and-cuda]] and [[index]] link down to the new page.
+- No edges created, changed, or broken. [[ligaments]] untouched.
