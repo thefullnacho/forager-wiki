@@ -96,5 +96,9 @@ The future edges that climb toward [[north-star]]. Each maps to a rung; each is 
   soil / air) fuse with vision on-device — the modular V2 hub.
 - **[[edge-hardware]] mesh** *(R4)*: Meshtastic / LoRa (HELTEC already in the site catalog) →
   offline sighting/hazard sharing across a mesh, no cloud.
+- **[[forager-ml]] → [[edge-hardware]] (second form factor, proposed 2026-08-20, not built)**:
+  Core ML port of [[model-registry]]'s stack to Apple Silicon, a phone-app SKU alongside the Pi 5
+  handheld rather than replacing it. Direction only; no conversion work has started. Detail in
+  [[edge-hardware]].
 - **R5 (summit):** body / biometric sensors + powered backpack; the Pi 5 as the engine fusing all
   of the above + on-device judgment. See [[north-star]].

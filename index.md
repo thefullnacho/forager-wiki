@@ -28,6 +28,9 @@ The relationships between projects live in [[ligaments]]; where they're all conv
 - [[brag-video]] — point `/brag` at any repo → a 15–25s polished launch clip / vertical reel from its own UI.
 
 ## Open threads (see `DIVERGENCE:` / `VERIFY:` items)
+- PENDING DECISION (2026-08-20): Pi 5 handheld BOM has risen to ~$450, pushing retail toward
+  ~$700. A two-SKU direction (Core ML iPhone app as the acquisition tier, the Pi 5 handheld as
+  the premium "sovereign" tier) is under consideration but nothing is built. [[edge-hardware]] [[ligaments]]
 - RESOLVED 2026-08-15: `thefullnacho/forager-obs` created (public, default branch `main`) and pushed. The CI path was verified by anonymous clone + sibling editable install + the 36 shared safety tests, so both repos' `observability` workflows go green on the next push. [[observability-harness]]
 - DIVERGENCE (intentional, 2026-08-15): the `forager-obs` edge is a hard link, not a vendored snapshot — the one exception to the no-hard-link rule, because vendoring a safety rule is what caused the drift it fixes. [[observability-harness]] [[ligaments]]
 - DIVERGENCE: field-station serves 3 experts (psychedelics omitted by intent); forager_ml trains 4 — see [[model-registry]].

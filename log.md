@@ -315,3 +315,22 @@ Append-only. One dated line per ingest / decision / lint pass. Newest at the bot
 - `VERIFY:` herdr is pre-1.0 from a 2026-formed company; pinned to the `stable` channel.
 - [[dev-box-and-cuda]] and [[index]] link down to the new page.
 - No edges created, changed, or broken. [[ligaments]] untouched.
+
+## 2026-08-20 — ingest: BOM pressure forces a proposed second SKU for edge hardware
+- [[edge-hardware]]: Pi 5 handheld BOM risen to ~$450 (rising Raspberry Pi 5 prices), pushing
+  retail toward ~$700. Direction under consideration in [[homesteader-labs-site]]: a free/low-cost
+  Core ML iPhone app (Apple Silicon Neural Engine, fully on-device inference) as the acquisition
+  tier, with the Pi 5 handheld repositioned as the premium "sovereign, no app store" SKU rather
+  than the only product.
+- App Store guideline research done same-day: 1.4.1 (physical harm / health apps) does not ban
+  the category; three comparable apps ship today. The refuse-by-default design already satisfies
+  the guideline's actual bar (disclosed methodology, validated accuracy, "consult a professional").
+  Separately surfaced a real, documented, category-wide accuracy scandal (Public Citizen: best
+  competing app 49% accurate, 44% toxic-species misidentification) — read as market validation of
+  [[anti-slop-principle]]'s abstain-over-bluff wedge, not a reason to avoid the category.
+  Recommended next step (not started): a minimal TestFlight submission with real safety copy.
+- **New planned edge added to [[ligaments]]:** [[forager-ml]] → [[edge-hardware]] (second form
+  factor) — a Core ML port of [[model-registry]]'s stack, proposed only, no conversion work
+  started. Existing Hailo 8L / Pi 5 edge is unchanged.
+- [[index]] open threads carries the pending-decision flag. Status is direction-only: no BOM
+  requote, no Core ML port, no TestFlight submission exist yet. Revisit once either side moves.
