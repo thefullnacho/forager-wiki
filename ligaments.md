@@ -25,6 +25,12 @@ another. This page is the canonical list of those edges; each project page links
   - **RESOLVED 2026-08-15:** `thefullnacho/forager-obs` created (public, default branch `main`)
     and pushed. CI in both repos checks it out beside the consuming repo; the path was verified
     by anonymous clone + sibling editable install + the 36 shared safety tests.
+  - **NEW 2026-08-25:** `convergence.py`'s abstention-policy constants (`DEADLY_VETO_FLOOR`,
+    `EXPERT_CONFIDENCE_THRESHOLD`) stay hand-ported, unextracted — but now have a check, not a
+    shared package: `ops/convergence_drift.py`, a forager_ml pre-commit hook that AST-diffs named
+    constants between the two files. Found real, live DIVERGENCE on first run (forager_ml has
+    neither constant), zero DRIFT. Local only — the field-station repo has no GitHub remote.
+    Detail in [[observability-harness]].
 - **[[forager-ml]] ↔ [[hestia]]** *(shared dev box)*: both run on the same RTX 5080 + 4060 Ti
   machine; they share GPU-allocation discipline and the same class of CUDA library-path bug —
   see [[dev-box-and-cuda]].

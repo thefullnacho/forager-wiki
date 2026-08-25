@@ -76,7 +76,22 @@ tests running from the cloned copy.
 ## Not yet shared: the abstention policy
 
 `convergence.py` (single-expert routing, `DEADLY_VETO_FLOOR`,
-`EXPERT_CONFIDENCE_THRESHOLD`) is still hand-ported between the two repos and is
-the next candidate — but it is in the **Space's runtime path**, so extracting it
-would make the Space depend on a pip install to boot. That needs a different
-mechanism than this package uses. See [[model-registry]].
+`EXPERT_CONFIDENCE_THRESHOLD`) is still hand-ported between the two repos — still
+true, still not extracted, because it is in the **Space's runtime path** and
+extracting it would make the Space depend on a pip install to boot. See
+[[model-registry]].
+
+**The different mechanism (2026-08-25): `ops/convergence_drift.py`, a check, not a
+shared package.** Not an extraction — a constant-level AST diff between the two
+files' `convergence.py`, run as a forager_ml pre-commit hook (local only:
+forager-field-station has no GitHub remote, so CI can't check it out the way it
+does `forager-obs`). Separates two cases: a named constant present on only one
+side is a **DIVERGENCE** (reported, doesn't fail — the two files are legitimately
+different implementations, a whole-file diff would be permanently red) versus the
+*same* constant holding two different values, which is **DRIFT** and fails. On
+first run it found real, live DIVERGENCE that had gone unnoticed: forager_ml's
+copy has neither `DEADLY_VETO_FLOOR` nor `EXPERT_CONFIDENCE_THRESHOLD` at all —
+only the older `CONFIDENCE_THRESHOLD` / `LOW_CONFIDENCE_THRESHOLD` pair. No DRIFT
+(no shared constant disagrees), so nothing failed, but the gap between the two
+abstention policies is now visible on every commit instead of living only in this
+paragraph.

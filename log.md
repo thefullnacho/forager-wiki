@@ -334,3 +334,16 @@ Append-only. One dated line per ingest / decision / lint pass. Newest at the bot
   started. Existing Hailo 8L / Pi 5 edge is unchanged.
 - [[index]] open threads carries the pending-decision flag. Status is direction-only: no BOM
   requote, no Core ML port, no TestFlight submission exist yet. Revisit once either side moves.
+
+- **2026-08-25 — `convergence_drift`: the "different mechanism" [[observability-harness]] named
+  arrives.** The 2026-08-15 entry left `convergence.py`'s abstention constants
+  (`DEADLY_VETO_FLOOR`, `EXPERT_CONFIDENCE_THRESHOLD`) unextracted on purpose, since the Space's
+  runtime path rules out a `forager-obs`-style pip dependency, and said it needed "a different
+  mechanism." Built: `ops/convergence_drift.py`, a forager_ml pre-commit hook that AST-diffs named
+  constants between the two hand-ported files rather than extracting them — same-name/
+  different-value fails (DRIFT), name-on-only-one-side is reported not failed (DIVERGENCE, since
+  the files are legitimately different implementations). First run found real DIVERGENCE that had
+  gone unnoticed since the Space's copy evolved past forager_ml's: forager_ml has neither constant,
+  only the older `CONFIDENCE_THRESHOLD`/`LOW_CONFIDENCE_THRESHOLD` pair. Zero DRIFT. Local only, no
+  CI — forager-field-station has no GitHub remote. Updated [[observability-harness]], [[ligaments]],
+  [[index]].
