@@ -347,3 +347,12 @@ Append-only. One dated line per ingest / decision / lint pass. Newest at the bot
   only the older `CONFIDENCE_THRESHOLD`/`LOW_CONFIDENCE_THRESHOLD` pair. Zero DRIFT. Local only, no
   CI — forager-field-station has no GitHub remote. Updated [[observability-harness]], [[ligaments]],
   [[index]].
+- **2026-09-17** — Ingest from a [[homesteader-labs-site]] session that shipped the drip irrigation
+  post. Recorded a NEW-direction edge in [[ligaments]] as **evaluated and not created**:
+  [[hestia]] → [[homesteader-labs-site]] telemetry as editorial evidence, killed because HA purges
+  raw states at 10 days (B-hyve run times gone), the post-install hot week is flat, and the
+  pre-drip WH51 baseline is carried-forward or zero 2026-06-02 to 06-07 against a 2026-06-13
+  install. Updated [[hestia]] (`garden_watch.stale_sensors`, `836cd09`, reporting-only, must still
+  gate the valve), [[homesteader-labs-site]] (backwards-edge attempt, self-hosted video), and
+  [[dev-box-and-cuda]] (faster-whisper + ffmpeg tonemap as a third consumer). No [[index]] change:
+  no new page, and every edited page was already cataloged.

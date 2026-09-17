@@ -29,6 +29,12 @@ content. No backend DB: static JSON, MDX, and client-side localStorage. Has a st
 **Edges** ([[ligaments]]):
 - **Sells** the hardware [[forager-ml]] deploys to — the WALKING MAN PRO handheld; see [[edge-hardware]].
 - Source of the [[brand-thesis]] + voice inherited by every other project's outward writing.
+- **2026-09-17:** first attempt to read the [[hestia]] edge backwards, pulling homestead soil
+  telemetry as evidence for a post. Rejected on the data, not the idea; see [[ligaments]]. The
+  site's own writing now treats sensor readings as observation, not measurement.
+- **2026-09-17:** transcribes and tonemaps its own post videos on the [[dev-box-and-cuda]] box with
+  hestia's faster-whisper service environment; video is self-hosted because `/privacy` forbids the
+  cookies a YouTube embed sets.
 - **LIVE (2026-07-01):** supplies two datasets to [[hestia]] — `pest-companions.json` (pest-watch
   emergence alerts) and `frost-zones.json` (almanac frost normals), both vendored snapshots on
   hestia's side. The site stays the source of truth. See [[ligaments]].

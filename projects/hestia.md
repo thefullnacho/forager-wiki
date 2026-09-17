@@ -32,6 +32,12 @@ records, and skill-routing are deterministic scaffolding around it.
 - Shares the RTX 5080 + 4060 Ti box and the CUDA library-path gotcha with [[forager-ml]] — see
   [[dev-box-and-cuda]]. (2026-06-22: the `libcublas.so.12` LD_LIBRARY_PATH fix for hestia's
   whisper service is the same bug-family forager_ml flags in its README.)
+- **2026-09-17:** `garden_watch.stale_sensors()` (commit `836cd09`) flags soil sensors that stop
+  reporting, read 0%, hold one value for 24h, or run low on battery, and collapses a gateway-wide
+  failure into one line. Prompted by a [[homesteader-labs-site]] session finding six days of
+  carried-forward WH51 values, and by one sensor sitting dead for a month unnoticed. Reporting
+  only: the same check still has to gate the valve before soil readings drive B-hyve zone 4.
+  See [[ligaments]] for why that telemetry did not become published content.
 - **LIVE (2026-07-01):** consumes two site datasets from [[homesteader-labs-site]] —
   `pest-companions.json` (GDD-driven pest-emergence alerts via HA) and `frost-zones.json`
   (NOAA normals for the almanac's observed-vs-normal frost lines). Vendored snapshots, not

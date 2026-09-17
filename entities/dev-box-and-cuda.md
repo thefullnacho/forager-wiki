@@ -51,3 +51,8 @@ fails as a service/job.
 
 **Rule of thumb:** if it works in your shell but fails as a service/cron/compile job, suspect
 `LD_LIBRARY_PATH` first. Pin the CUDA libdir explicitly in the unit/script.
+
+**2026-09-17, third consumer:** [[homesteader-labs-site]] content work reuses hestia's
+faster-whisper (1.2.1, `small.en`, 4060 Ti) via its uv project environment to transcribe post
+videos, and ffmpeg on the same box to tonemap iPhone HDR (bt2020 / arib-std-b67) to bt709 before
+encode. No new install; the box is now shared by three projects, not two.

@@ -88,6 +88,23 @@ another. This page is the canonical list of those edges; each project page links
   snapshots per-season JSON so year-over-year comparisons self-assemble from 2027 on.
   - VENDORED: `homesteader-labs-site/content/frost-zones.json` -> `hestia/data/frost-zones.json`
 
+- **[[hestia]] → [[homesteader-labs-site]]** *(telemetry as editorial evidence — EVALUATED AND NOT
+  CREATED, 2026-09-17)*: the first attempt to run the site/hestia data edge **backwards**. Every
+  live edge between these two runs site → hestia (datasets vendored downhill). For the drip
+  irrigation post the site session pulled hestia-side Home Assistant soil-moisture statistics
+  (Ecowitt WH51, one per raised bed) to chart moisture against watering, and the edge was
+  deliberately not created: the data cannot carry the claim. HA keeps hourly long-term statistics
+  back to 2025-12 but purges raw states at 10 days; B-hyve run times therefore exist only for the
+  last 10 days, so the watering half of the chart is unrecoverable for the season. The hottest dry
+  week after install (2026-06-27 to 07-03) is flat in all six beds, one clean watering signal all
+  week (2026-07-01 05:00-06:00). No pre-drip baseline exists: the WH51 gateway reported frozen or
+  0.0 values 2026-06-02 to 06-07 and live data starts 2026-06-08 11:00, four days before the
+  2026-06-13 install. **Consequence for any future version of this edge:** homestead telemetry is
+  not publication-grade by default; a published claim needs the staleness gate below plus retention
+  raised past 10 days *before* the season it describes. The post shipped with the finding stated as
+  observation instead. Kept here because the direction is new and the reason is decision-bearing,
+  not because an edge exists.
+
 ## Planned edges (roadmap — not built)
 
 The future edges that climb toward [[north-star]]. Each maps to a rung; each is independently useful.
