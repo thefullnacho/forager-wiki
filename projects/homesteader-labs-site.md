@@ -29,6 +29,12 @@ content. No backend DB: static JSON, MDX, and client-side localStorage. Has a st
 **Edges** ([[ligaments]]):
 - **Sells** the hardware [[forager-ml]] deploys to — the WALKING MAN PRO handheld; see [[edge-hardware]].
 - Source of the [[brand-thesis]] + voice inherited by every other project's outward writing.
+- **LIVE (2026-09-20):** publishes its reference tables as public JSON endpoints with an OpenAPI
+  spec, licensed per dataset (CC BY 4.0 for the pest compilation, public-domain-derived for zone
+  and frost). First move of the agent-readiness bet: be early, be the resource an assistant reaches
+  for. Metering is deferred on purpose, since the public-domain-derived parts are rebuildable by
+  anyone and the defensible dataset, observed days-to-maturity, does not exist yet. See
+  [[ligaments]].
 - **2026-09-17:** first attempt to read the [[hestia]] edge backwards, pulling homestead soil
   telemetry as evidence for a post. Rejected on the data, not the idea; see [[ligaments]]. The
   site's own writing now treats sensor readings as observation, not measurement.

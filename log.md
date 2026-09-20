@@ -390,3 +390,9 @@ No [[ligaments]] change: no edge created, changed, or broken. The integrator cha
 prospective outbound edge from [[hestia]] to a party outside the constellation, and nothing has
 been sold. Internal work today (puppy watch, the structured weight path, the `/whelp` capture
 board, the iOS photo-button fix, the stake placement lesson) is single-repo and documented there.
+- **2026-09-20** — Ingest: [[homesteader-labs-site]] now serves zone, frost and pest data as public
+  endpoints with `/data/`, `/llms.txt` and `/openapi.json`, driven by muse.ai opening connectors
+  (connector submitted same day, status check 2026-10-04). Recorded the new outward edge in
+  [[ligaments]] with the per-dataset license split, and why it does **not** change the vendored
+  site → [[hestia]] edges. Metering deferred; counting via Vercel server-side logs to keep the CDN
+  serving free and the no-client-analytics promise intact. No [[index]] change: no new page.

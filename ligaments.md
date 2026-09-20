@@ -88,6 +88,21 @@ another. This page is the canonical list of those edges; each project page links
   snapshots per-season JSON so year-over-year comparisons self-assemble from 2027 on.
   - VENDORED: `homesteader-labs-site/content/frost-zones.json` -> `hestia/data/frost-zones.json`
 
+- **[[homesteader-labs-site]] → anyone** *(public data endpoints — LIVE 2026-09-20)*: the two
+  tables hestia vendors are now also served publicly as JSON, with an OpenAPI spec:
+  `/api/zone/{zip}/`, `/api/frost/{zone}/`, `/api/pests/`, `/api/pests/{cropId}/`, documented at
+  `/data/`, summarised at `/llms.txt`, specified at `/openapi.json`. Static, CDN-served, no key.
+  **This does not change the hestia edges:** vendored snapshots stay vendored per the no-hard-link
+  rule, and hestia should not start fetching at runtime for a table that changes once a season.
+  What it changes is that the site's own data now carries its terms in-band. The split is
+  deliberate and worth not undoing: pests and companions are CC BY 4.0 because the compilation is
+  ours, while zone and frost say "public domain source, aggregation ours, attribution requested"
+  because PRISM and NOAA facts are not ours to license. `alertable: false` and
+  `notAlertableReason` ride through to the response and into the spec, so the refusal hestia
+  already respects (see the pest-alert edge above) is now machine-readable by anything else that
+  builds on it. Driver: muse.ai opening connectors to developers 2026-09-20, connector submitted
+  the same day. Metering deliberately deferred; see [[homesteader-labs-site]].
+
 - **[[hestia]] → [[homesteader-labs-site]]** *(telemetry as editorial evidence — EVALUATED AND NOT
   CREATED, 2026-09-17)*: the first attempt to run the site/hestia data edge **backwards**. Every
   live edge between these two runs site → hestia (datasets vendored downhill). For the drip
