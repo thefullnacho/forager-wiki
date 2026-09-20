@@ -5,17 +5,24 @@ applications deliberately do NOT overlap: each ask is scoped to one project so t
 never compete for the same story. Application/correspondence *drafts* stay private in
 each repo (e.g. hestia's gitignored `outreach/`); this page is the cross-project ledger.
 
-## In flight (as of 2026-07-10)
+## In flight (as of 2026-09-19)
 
-- **NLnet (NGI Zero Commons Fund)** — **$18K toward [[homesteader-labs-site]] /
-  HomesteaderLabs**, applied ~late Feb 2026. The 2026-06-16 announcement covered the
-  Dec 2025 call, so this cycle decides ~late summer/fall 2026. NLnet notifies all
-  applicants directly; a mid-review Q&A email is normal, not a bad sign.
-- **FUTO** — sent 2026-07-03 (subject "Let's unplug Alexa", grantapps@futo.org), scoped
-  to **[[hestia]]** only. Ask = packaging/install paths; sustainability note = premium
-  home-install retainer underwrites the free version. No dollar figure (their process:
-  email, they guide). Awaiting reply.
+**Nothing.** All three 2026 applications are closed. Grant funding is no longer a live
+path for this work, and the next money has to come from revenue or from a fundamentally
+different kind of ask. See the concierge / integrator channel in [[hestia-concierge-tier]].
+
 ## Resolved
+
+- **NLnet (NGI Zero Commons Fund)** — **DECLINED**, reported 2026-09-19. $18K ask toward
+  [[homesteader-labs-site]] / HomesteaderLabs, applied ~late Feb 2026, so roughly seven
+  months from application to no. The regular open call reopening after summer 2026 is the
+  only remaining NLnet route and it needs a NEW ask, not a resubmission of this one.
+- **FUTO** — **NO RESPONSE**, closed 2026-09-19 after **78 days** of silence. Sent
+  2026-07-03 (subject "Let's unplug Alexa", grantapps@futo.org), scoped to [[hestia]] only.
+  Their stated process is "email us and we guide you", so silence at 78 days on a
+  sponsored-grant track with no deadline reads as a no rather than a queue. Worth knowing
+  for any future ask: the best-fit funder on paper, whose thesis matched the project almost
+  exactly, did not reply at all. Fit on paper is not a channel.
 
 - **Gradio / Hugging Face "build small" hackathon** — **[[forager-field-station]]**
   submitted; results announced **2026-07-10**: **did not place.** The build stands on its

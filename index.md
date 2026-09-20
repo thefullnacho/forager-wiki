@@ -20,7 +20,7 @@ The relationships between projects live in [[ligaments]]; where they're all conv
 - [[agent-runtime]] — the four coding-agent CLIs on that box, the `herdr` multiplexer added 2026-08-16, and why worktree isolation (not the multiplexer) is the safety boundary.
 - [[brand-thesis]] — caloric security / off-grid / "refuses when unsure" + the brand voice.
 - [[anti-slop-principle]] — the shared "model on a short leash" stance; hestia's determinism-over-intelligence and forager's abstain-over-bluff are one tenet.
-- [[funding]] — the money ledger: NLnet (site, pending) + FUTO (hestia, sent 2026-07-03); HF hackathon (field-station) did not place (2026-07-10); watchlist incl. WILDLABS Jan 2027.
+- [[funding]] — the money ledger: **all three 2026 asks closed 2026-09-19.** NLnet (site) declined, FUTO (hestia) never replied in 78 days, HF hackathon (field-station) did not place. Nothing in flight; watchlist incl. WILDLABS Jan 2027.
 - [[gdd-convention]] — pest thresholds are base 50 °F from Jan 1, full stop; season GDD (from observed last frost) is a different quantity with a different name. Sourced thresholds + citations live here.
 - [[observability-harness]] — the batch-replay harness in both Forager repos: two grains (per image vs per K-photo session) over one shared `forager-obs` package that owns the `toxic_as_edible` rule. The one intentional hard-link edge.
 

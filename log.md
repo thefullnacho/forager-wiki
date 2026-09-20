@@ -356,3 +356,37 @@ Append-only. One dated line per ingest / decision / lint pass. Newest at the bot
   gate the valve), [[homesteader-labs-site]] (backwards-edge attempt, self-hosted video), and
   [[dev-box-and-cuda]] (faster-whisper + ffmpeg tonemap as a third consumer). No [[index]] change:
   no new page, and every edited page was already cataloged.
+
+## 2026-09-19
+
+Money: all three 2026 asks are closed. Updated [[funding]] — NLnet **declined** (the $18K
+[[homesteader-labs-site]] ask, ~7 months from application to no), FUTO **never replied** (78 days
+on a no-deadline sponsored-grant track whose stated process is "email and we guide you", scoped to
+[[hestia]]), and the HF hackathon already did not place. Nothing is in flight. The lesson worth
+carrying across the constellation: the single best fit on paper did not answer, so fit on paper is
+not a channel. Grant funding is no longer a live path for any member and should not be re-suggested
+without a genuinely new ask.
+
+Where the money is expected to come from instead is a commercial direction for [[hestia]]: an
+on-premises property ledger (records + camera/sensor ingest + plain-language query, no actuation)
+sold through custom-install AV integrators rather than direct. It does not actuate, deliberately,
+which keeps liability near zero and keeps it out of the control-system driver business. Two
+positioning facts, both confirmed by research rather than assumed: Nines already ships a
+self-hosted container (so "nobody runs on-prem" is false), though their own docs say the
+self-hosted build loses cloud-dependent features; and OvrC, the remote-monitoring platform
+integrators already earn RMR on, is owned by Control4's parent. The defensible claim is narrower —
+device-up monitoring is not semantic-truth monitoring, which is exactly what
+`garden_watch.stale_sensors` does and what OvrC structurally cannot.
+
+VERIFY: unvalidated with a single integrator. Nothing about the property ledger gets built before
+one has said out loud what breaks in their week. Four Tier 1 shoreline emails go out Tuesday.
+
+DIVERGENCE: [[hestia]] is AGPL and public auditability is claimed as a commercial differentiator,
+while the plan also calls for a commercial fork. A closed fork removes the audit argument; an AGPL
+one hands every integrator's lawyer the network clause. Unresolved, and the cheap window closes
+the moment an outside pull request is merged into the public repo.
+
+No [[ligaments]] change: no edge created, changed, or broken. The integrator channel is a
+prospective outbound edge from [[hestia]] to a party outside the constellation, and nothing has
+been sold. Internal work today (puppy watch, the structured weight path, the `/whelp` capture
+board, the iOS photo-button fix, the stake placement lesson) is single-repo and documented there.
