@@ -29,6 +29,10 @@ dir is hestia's *local* wiki — this constellation wiki links to it, never dupl
 records, and skill-routing are deterministic scaffolding around it.
 
 **Edges** ([[ligaments]]):
+- **2026-09-30:** `deploy/esphome/greenhouse-door.yaml` (branch `greenhouse-door`) is test 1 of
+  the [[homesteader-labs-site]] build loop: an ESPHome board whose test night becomes a measured
+  post. Alert is an HA automation, not a brain watcher, because it must fire in seconds. PLANNED
+  edge, see [[ligaments]].
 - Shares the RTX 5080 + 4060 Ti box and the CUDA library-path gotcha with [[forager-ml]] — see
   [[dev-box-and-cuda]]. (2026-06-22: the `libcublas.so.12` LD_LIBRARY_PATH fix for hestia's
   whisper service is the same bug-family forager_ml flags in its README.)

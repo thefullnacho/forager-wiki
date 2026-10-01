@@ -396,3 +396,9 @@ board, the iOS photo-button fix, the stake placement lesson) is single-repo and 
   [[ligaments]] with the per-dataset license split, and why it does **not** change the vendored
   site → [[hestia]] edges. Metering deferred; counting via Vercel server-side logs to keep the CDN
   serving free and the no-client-analytics promise intact. No [[index]] change: no new page.
+- **2026-09-30** — Ingest: the build loop. [[brand-thesis]] gains the audience decision (makers
+  are the audience, the garden is the subject; builds ship a number, a clip and a part). The
+  [[hestia]] → [[homesteader-labs-site]] edge evaluated and not created on 2026-09-17 is reopened as
+  PLANNED, by protocol rather than harvested telemetry: test 1 is a greenhouse door board in
+  hestia. Corrected two stale claims on [[homesteader-labs-site]] (Next.js 16 on `master`, not 14 on
+  `dev`; the catalog is WALKING MAN PRO only). No new page.

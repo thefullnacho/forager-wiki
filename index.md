@@ -18,7 +18,7 @@ The relationships between projects live in [[ligaments]]; where they're all conv
 - [[edge-hardware]] — Hailo 8L / Pi 5 `forager-dev` / the WALKING MAN PRO handheld.
 - [[dev-box-and-cuda]] — the shared RTX 5080 + 4060 Ti box, the recurring CUDA library-path gotcha, and which GPU actually drives the display.
 - [[agent-runtime]] — the four coding-agent CLIs on that box, the `herdr` multiplexer added 2026-08-16, and why worktree isolation (not the multiplexer) is the safety boundary.
-- [[brand-thesis]] — caloric security / off-grid / "refuses when unsure" + the brand voice.
+- [[brand-thesis]] — caloric security / off-grid / "refuses when unsure" + the brand voice; audience is makers, the garden is the subject (2026-09-30).
 - [[anti-slop-principle]] — the shared "model on a short leash" stance; hestia's determinism-over-intelligence and forager's abstain-over-bluff are one tenet.
 - [[funding]] — the money ledger: **all three 2026 asks closed 2026-09-19.** NLnet (site) declined, FUTO (hestia) never replied in 78 days, HF hackathon (field-station) did not place. Nothing in flight; watchlist incl. WILDLABS Jan 2027.
 - [[gdd-convention]] — pest thresholds are base 50 °F from Jan 1, full stop; season GDD (from observed last frost) is a different quantity with a different name. Sourced thresholds + citations live here.

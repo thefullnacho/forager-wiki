@@ -119,6 +119,12 @@ another. This page is the canonical list of those edges; each project page links
   raised past 10 days *before* the season it describes. The post shipped with the finding stated as
   observation instead. Kept here because the direction is new and the reason is decision-bearing,
   not because an edge exists.
+  - **2026-09-30, reopened by design (PLANNED, not live).** The site's build loop (makers are the
+    audience, every build log ships a measured number) makes hestia hardware the subject of posts.
+    This version answers the 09-17 objection with a protocol instead of harvested history: test 1
+    is a greenhouse door board in hestia (reed switch and DS18B20 on one ESP32, one clock), run as
+    a dated test night and exported inside the 10-day recorder purge. The edge goes live when the
+    first post built on it ships. VERIFY: the number survives the export.
 
 ## Planned edges (roadmap — not built)
 

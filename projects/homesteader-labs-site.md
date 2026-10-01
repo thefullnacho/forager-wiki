@@ -1,7 +1,7 @@
 # homesteader-labs-site
 
 `~/Documents/Forager/homesteader_labs_site_v01/Homesteader_labs/homesteader-labs-next-CLEAN`
-· git `dev` · Next.js 14 (App Router)
+· deploy branch `master` · Next.js 16 (App Router) *(corrected 2026-09-30; was `dev` / 14)*
 
 **What it is:** the **Homesteader Labs** brand, content, and product site for off-grid
 homesteaders — interactive survival/planting tools, a product catalog, and field-documentation
@@ -11,7 +11,7 @@ content. No backend DB: static JSON, MDX, and client-side localStorage. Has a st
 
 **Boundary:** the marketing + tools + content surface and the brand voice. Owns: crop database
 (`content/crops/*.json`, incl. caloric + companion-planting data), product catalog
-(`lib/products.ts` — WALKING MAN PRO, HELTEC V3), planting/survival calculators
+(`lib/products.ts` — WALKING MAN PRO only; the HELTEC V3 listing was a stale claim, corrected 2026-09-30 per the repo `CLAUDE.md`), planting/survival calculators
 (`lib/plantingIndex.ts`, `lib/survivalIndex.ts`), blog/archive MDX.
 
 **Key buried logic (findable now — the point of this wiki):**
@@ -27,6 +27,9 @@ content. No backend DB: static JSON, MDX, and client-side localStorage. Has a st
   `lib/survivalPlan/*` (paid plan generator + Stripe). Defer to the code for mechanics.
 
 **Edges** ([[ligaments]]):
+- **2026-09-30:** the build loop. The site's audience is makers ([[brand-thesis]]); build logs
+  get their own newsletter signup tagged `source = builds`, and [[hestia]] hardware becomes the
+  subject of measured posts, starting with a greenhouse door board. PLANNED edge, see [[ligaments]].
 - **Sells** the hardware [[forager-ml]] deploys to — the WALKING MAN PRO handheld; see [[edge-hardware]].
 - Source of the [[brand-thesis]] + voice inherited by every other project's outward writing.
 - **LIVE (2026-09-20):** publishes its reference tables as public JSON endpoints with an OpenAPI
